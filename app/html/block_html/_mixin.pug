@@ -1,0 +1,78 @@
+mixin icon(name,cls)
+  svg(class=cls)
+    use(xlink:href="#" + name)
+
+mixin checkbox(text,disable)
+  .check-el
+    if disable
+      label.style-label.style-label--checkbox.style-label--disable
+        input(type="checkbox").style-input
+        .style-input-element
+          +icon("checked","icon")
+        .style-input-text=text
+    else
+      label.style-label.style-label--checkbox
+        input(type="checkbox").style-input
+        .style-input-element
+          +icon("checked","icon")
+        .style-input-text=text
+mixin radio(text,group,checked)
+  .check-el
+    label.style-label.style-label--radio
+      input(type="radio" name=group checked=checked).style-input
+      .style-input-element
+        .icon-radio
+      .style-input-text=text
+
+mixin incr(state,className='')
+  .incr(class= state ? className  +' incr--one' : className )
+    .incr__minus.incr__nav
+      +icon("minus","icon")
+    .incr__val
+      span=state ? 1 : 0
+      .incr__val-coner
+    .incr__plus.incr__nav
+      +icon("plus","icon")
+
+mixin product(img="item-1.jpg",size)
+  .product-el
+    .product-el-wrap
+      a(href="#" class = size? "product__img--lg":'').product__img
+        .product__img-el(style="background-image:url('img/"+img+"')")
+        .product-el--add
+          +icon("cart-empty","icon")
+          .product-el--add-val 2
+      .product__cont
+        a(href="#").product__title Манты с рубленной бараниной
+        .size
+          .size__el.size__el--active 200 г
+          .size__el 400 г
+          .size__el 800 г
+        .product-footer
+          .product-price 935 ₸
+          .product-weight 230 г / 1 порция
+          .item-add
+            +icon("plus","icon")
+      .product-box
+        .product__text Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда
+        .product-kkal
+          .product-kkal__title.type--sm.type--gray Энергетическая ценность на 100 г:
+          .type--sm 456 ккал / 34 б / 65 ж / 46 у
+
+
+
+
+
+mixin product-sm(img="item-1.jpg",size)
+  .product-el.product-el--sm.js-slide-parrent
+    .product-el--add
+      +icon("cart-empty","icon")
+      .product-el--add-val 2
+    a(href="#" class = size? "product__img--lg":'').product__img
+      .product__img-el(style="background-image:url('img/"+img+"')")
+    .product__cont
+      a(href="#").product__title Капрічоза
+      .product-footer
+        .product-price 250 ₴
+        .item-add
+          +incr(false,"incr--single incr--mdx incr--mark-light ")

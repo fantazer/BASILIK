@@ -1,0 +1,121 @@
+mixin header()
+	//block header
+	.noty-wrap
+		.main-cont
+			.noty
+				.noty__text Установи мобильное приложение Basilic и заказывай без очереди, получай и оплачивай бонусами!
+				a(href="#").noty__get.btn--sm.btn--white Скачать
+				.noty__close.js-noty__close
+					+icon("close-box","icon")
+	.header-wrap
+		.header-menu.js-slide-block-toggle(data-menu="menu")
+			.header-menu-btn
+				+icon("food","icon is-close")
+				+icon("close","icon is-open")
+				span Меню
+		a(href="/").header-logo
+			img(src="img/logo.svg", alt="").header-logo--desc
+			img(src="img/logo-light.svg", alt="").header-logo--mobile
+		.header-cont
+			// top header
+			.header-top
+				.header-location
+					+icon("location","icon icon--md icon--mark icon--right")
+					span Нур-Султан
+					.bubble-loc.hidden
+						// NOTE!!! REMOVE Class .hidden
+						.bubble-loc__title Ваш город  <span class="type--red type--bold">Нур-султан ?</span>
+						.bubble-loc__footer
+							.bubble-loc__footer--true Да
+							.bubble-loc__footer--false Нет, выбрать другой
+				.header-work__time работаем с 9 до 23
+				.nav-top
+					each item in navTop
+						a(href="#").nav-top__el #{item}
+				.auth.icon-row
+					//toggle class .auth + .active to auth-img show
+					.auth-img(style="background-image:url('img/user.jpg')")
+					+icon("user","icon icon--md icon--gray icon--right")
+					span Профиль
+				.lang
+					a(href="#").lang__el.lang__el--active Каз
+					a(href="#").lang__el Eng
+					a(href="#").lang__el Рус
+			// top header === end
+
+			// header-main
+			.header-main
+
+				.header-nav
+					each item,i in headerNav
+						a(href="#" class=i>6?'header-nav__el--mobile':'').header-nav__el #{item}
+					.header-nav__more
+						span Eще
+						.header-nav-sub
+							a(href="#").header-nav-sub__el--mobile Гарниры
+							a(href="#").header-nav-sub__el--mobile Соусы
+							a(href="#").header-nav-sub__el Десерты
+							a(href="#").header-nav-sub__el Напитки
+							a(href="#").header-nav-sub__el Дополнительно
+							a(href="#").header-nav-sub__el Замороженная продукция
+				.search
+					.search-wrap
+						input(type="text" placeholder="Поиск среди 365 блюд" class="input")
+					+icon("search","icon")
+				a(href="#").header-cart
+					+icon("cart","icon")
+					.header-cart__cost 1249 р
+					.header-cart__size 5
+					.cart-bubble-wrap.hidden
+						// NOTE!!! REMOVE Class .hidden
+						.cart-bubble
+							+icon("free","icon")
+							span Для бесплатной доставки осталось добавить товаров еще на 456 тенге
+
+				.header-nav-toggle.js-slide-block-toggle(data-menu="nav")
+					+icon("menu","icon is-close")
+					+icon("close","icon is-open")
+			// header-main === end
+
+	//slide block cart
+	.slide-block.slide-block--left.slide-block--menu(data-menu="menu")
+		.slide-block-wrap.scroll
+			.slide-menu__list
+				each item in headerNav
+					a(href="#").header-nav__el.header-nav__el--light  #{item}
+
+
+	//slide block nav
+	.slide-block.slide-block--right.slide-block--menu(data-menu="nav")
+		.slide-block-wrap.scroll
+			.header-contact
+				+icon("location","icon")
+				.header-contact__info
+					a(href="tel:8 495 123 45 67").header-contact__loc Нур-Султан
+					.header-contact__time заказывайте с 10 до 20
+
+			.auth.icon-row
+				//toggle class .auth + .active to auth-img show
+				.auth-img(style="background-image:url('img/user.jpg')")
+				+icon("user","icon icon--md icon--gray icon--right")
+				span Профиль
+			.slide-menu-nav
+				each item in navTop
+					a(href="#").slide-menu-nav__el #{item}
+				a(href="#").slide-menu-nav__el.slide-menu-nav__el--light Публичная оферта
+				a(href="#").slide-menu-nav__el.slide-menu-nav__el--light Политика конфиденциальности
+
+			.size
+				.size__el.size__el--active Каз
+				.size__el Eng
+				.size__el Рус
+
+			.soc-row
+				a(href="#").soc-row__el
+					+icon("soc-facebook","icon")
+				a(href="#").soc-row__el
+					+icon("soc-instagram","icon")
+				a(href="#").soc-row__el.soc-row__el--red
+					+icon("soc-telegram","icon")
+		// main-header === end
+	//block header end

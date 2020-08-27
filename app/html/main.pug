@@ -1,0 +1,42 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.slider-wrap.slider-wrap--main.slider-wrap--inarrow
+		.slider-control.slider-control--left
+			+icon("arrow-left-fat","icon")
+		.slider-control.slider-control--right
+			+icon("arrow-right-fat","icon")
+		.main-slider.slider-item
+			- for (var i=0;i<4;i++)
+				.main-slider__el-wrap
+					a(href="#" style="background-image:url('img/slide-1.jpg')").main-slider__el.main-slider__el--md
+					a(href="#" style="background-image:url('img/slide-2.jpg')").main-slider__el.main-slider__el--sm
+	.content
+		.main-cont
+			.kind
+				each item,i in kind
+					a(href="#" style="background-image:url('img/kind-"+(i+1)+".jpg')").kind__el
+						.kind__el-title #{item}
+			.kind-sm
+				-
+					var items = [
+						'Соусы',
+						'Десерты',
+						'Напитки',
+						'Дополнительно',
+						'Замороженная продукция'
+						];
+				each item,i in items
+					a(href="#" style="background-image:url('img/btn-bg-"+(i+1)+".jpg')").kind__sm-el
+						span #{item}
+			// popular
+			.title.title--xl.type--center Популярное
+			.product-cont
+				- for (var i=0;i< 7;i++)
+					+product()
+			.btn-row-mid
+				a(href="#").product-more.btn--sm.btn--light.btn--mobile показать еще
+	+footer()
+include ./block_html/_script.pug
