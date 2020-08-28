@@ -161,6 +161,20 @@ $(document).ready(function () {
 		incrEl.value === 1 ? $(this).closest(".incr-btn").removeClass("incr-btn--active") : ''
 	})
 	// increment btn === end
+
+	$('.incr--single .incr__nav').click(function(){
+		var parrent = $(this).closest(".incr--single")
+		if(incrEl.value){
+			parrent.addClass('incr--single-active');
+		}else{
+			parrent.removeClass('incr--single-active');
+		}
+	});
+	/*$('.incr-btn .incr__minus').click(function () {
+		incrEl.value === 1 ? $(this).closest(".incr-btn").removeClass("incr-btn--active") : ''
+	})*/
+	// increment btn === end
+
 	// incr === end
 
 	// dropdown
@@ -257,7 +271,17 @@ $(document).ready(function () {
 	});
 	// toggle size items === end
 
-
+	// toggle sort tag
+	$('.sort-tag').click(function(){
+		var isTag = $(this).closest('.sort-tag-wrap').find('.sort-tag--false').length
+		if(!isTag){
+			$('.sort-tag').not(this).addClass('sort-tag--false')
+		}else{
+			$(this).toggleClass('sort-tag--false')
+		}
+	});
+	// toggle sort tag === end
+	
 	//window.condition = {};
 	//window.condition.info = info;
 });

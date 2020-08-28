@@ -26,7 +26,7 @@ body
 
 .content
 	flex-grow 1
-	padding: 30px 0
+	padding: 30px 0 50px 0
 .content--mid
 	flex(mid)
 
@@ -303,6 +303,16 @@ body
 	&:hover
 		background: white
 		color black
+.dropdown--light
+	border 0
+	@extend .type--sm
+	.dropdown-menu
+		margin-top: 10px
+	.dropdown-current
+		padding: 0 55px 0 10px
+		border 0
+	.dropdown-menu__el
+		padding 10px
 // drop === end
 
 .noty-wrap
@@ -960,7 +970,7 @@ body
 		padding: 60% 10%
 	display: block
 	bg-full()
-	padding: 16% 10%
+	padding: 13% 10%
 	//height: 500px
 	width: 100%
 
@@ -1061,8 +1071,6 @@ body
 	max-width 640px
 	line-height: 1.6
 
-
-
 .product-el
 	+below(640px)
 		border-radius 10px
@@ -1090,6 +1098,10 @@ body
 		.item-add
 			opacity: 1
 			visibility visible
+.product-el--sm
+	border-radius 25px!important
+	.product-el-wrap
+		border-radius 25px!important
 .product-box
 	display none
 	position absolute
@@ -1099,11 +1111,14 @@ body
 	border-radius 0 0 20px 20px
 	background: white
 .product-el-wrap
+	f()
+	fl()
 	padding: 20px
 	br(25px)
 	tr()
 	background: white
 	border 1px solid transparent
+	height: 100%
 .product-el--sm
 	.product-footer
 		margin-top: 0
@@ -1119,6 +1134,7 @@ body
 	flex(mid)
 	position relative
 	overflow: hidden
+	margin-bottom: 20px
 	img
 		margin: 0 auto
 		tr(all)
@@ -1169,6 +1185,8 @@ body
 	fl()
 	flex-grow 1
 	position relative
+	.size
+		margin-bottom: 20px
 .product__img-el
 	+below(640px)
 		br(10px)
@@ -1177,7 +1195,7 @@ body
 	height: 100%
 	bg-full()
 	background-size: cover
-	padding: 45% 10%
+	padding: 50% 10%
 	br(10px)
 .product__title
 	margin-bottom: 15px
@@ -1199,16 +1217,16 @@ body
 	@extend .type--sm
 .product-cont
 	+below(1024px)
-		margin: 30px 0
 		grid-gap 20px
 	+below(640px)
 		grid-template-columns: repeat(2, 1fr)
 	+below(480px)
 		grid-template-columns: 1fr
 	//flex(between)
+	margin: 30px 0
 	margin-bottom: 50px
 	display: grid
-	//grid-row-gap 30px
+	grid-column-gap 30px
 	grid-template-columns: repeat(3, 1fr)
 .product-cont--five
 	+below(1024px)
@@ -1220,14 +1238,14 @@ body
 		grid-template-columns: 1fr 1fr
 	grid-template-columns: repeat(5, 1fr)
 
-.product-cont--three
+.product-cont--four
 	grid-template-columns: repeat(auto-fill, minmax(14rem,1fr))
 	grid-gap 30px
 .product-footer
 	+below(480px)
 		margin-top: 10px
 	flex(between)
-	margin-top: 15px
+	margin-top: auto
 .product-price
 	+below(1200px)
 		font-size: 14px
@@ -1302,4 +1320,474 @@ body
 		fill white
 .product-kkal__title
 	margin-bottom: 5px
+	@extend .type--sm
+
+.product-el-tag-wrap
+	position absolute
+	top 10px
+	left 0
+.product-el-tag-el
+	color white
+	@extend .type--sm
+	padding: 5px 15px
+	br(5px)
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
 //.product-el-layer
+
+// PRODUCT === end
+
+.section-title
+	text-align center
+	@extend .type--xl
+	font-weight 700
+	margin-bottom: 40px
+	color $gray-light
+
+// app banner
+.app-wrap
+	padding: 60px 0
+	background: #f5f5f5
+	margin: 50px 0
+.app
+	f()
+	justify-content space-between
+.app-img
+	width: 45%
+.app-cont
+	width: 50%
+.app-title
+	color $dark
+	@extend .type--lg
+	font-weight 700
+	margin-bottom: 15px
+.app-text
+	line-height: 1.6
+	margin-bottom: 15px
+.app-row
+	flex(between)
+	margin-bottom: 30px
+//.app-row__el
+//.app-adv
+.app-adv__el
+	f()
+	align-items center
+	margin-bottom: 15px
+	&:last-child
+		margin-bottom: 0
+	.icon
+		size 18px
+		margin-right: 10px
+		fill $mark
+	span
+		@extend .type--sm
+// app banner === end
+
+// sale-list
+.sale-list
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(4, 1fr)
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+.sale-el
+	padding: 20px
+	br(20px)
+	tr()
+	&:hover
+		z-index 5
+		box-shadow 0 25px 40px rgba(0, 0, 0, 0.1)
+.sale-el__img
+	bg-full()
+	padding: 50% 10%
+	margin-bottom: 20px
+	br(10px)
+	overflow hidden
+.sale-el__title
+	font-weight: 700
+	margin-bottom: 10px
+	line-height: 1.4
+.sale-el__text
+	line-height:1.6
+	margin-bottom: 10px
+	color $gray
+	@extend .type--sm
+.sale-el__date
+	f()
+	align-items center
+	.icon
+		display inline-block
+	span
+		color $gray
+		font-size: 12px
+// sale-list === end
+
+// toggle seo text
+.toggle-seo
+	cp()
+	.icon
+		tr()
+	.type--true
+		display none
+.toggle-seo.active
+	span
+		color $mark
+	.icon
+		tr()
+		transform rotate(180deg)
+	.type--true
+		display block
+	.type--false
+		display none
+// toggle seo text === end
+
+// create
+.create
+	flex(mid)
+	span
+		+below(640px)
+			width: 100%
+		@extend .type--sm
+		display inline-block
+		margin-right: 10px
+// create === end
+
+// foooter
+.footer
+	padding: 18px 30px
+	background: $snow
+	f()
+	align-items center
+	justify-content space-between
+.footer-nav
+	flex(between)
+	width: 70%
+.footer-nav__el
+	@extend .type--sm
+	&:hover
+		color $mark
+// foooter === end
+
+
+// bread
+.bread
+	+below(640px)
+		display: none
+	f()
+	fw()
+	padding: 0 0 20px 0
+
+.bread__el
+	margin-right: 15px
+	margin-bottom: 10px
+	position: relative
+	@extend .type--sm
+	&:after
+		content '/'
+		position: absolute
+		right: -10px
+		top 0
+	&:last-child
+		color $gray
+		&:after
+			content ''
+			display: none
+// bread === end
+
+// sort
+.sort
+	flex(between)
+.sort__el
+	flex(mid)
+	cp()
+.sort-title
+	color $gray
+	@extend .type--sm
+	margin-right: 10px
+.sort-tag-wrap
+	f()
+	align-items center
+.sort-tag
+	padding: 5px 15px
+	@extend .type--sm
+	br(5px)
+	tr()
+	color white
+	margin-right: 10px
+	box-shadow 0 0 0 transparent
+	&:hover
+		box-shadow 0 4px 12px #949494
+	&:last-child
+		margin-right:0
+.sort-tag--false
+	background gray!important
+// sort === end
+
+// cat-link
+.cat-link
+	f()
+	fw()
+	align-items center
+.cat-link__el
+	padding: 12px 30px
+	margin-right: 20px
+	margin-bottom: 20px
+	br(5px)
+	tr()
+	background: $snow
+	@extend .type--sm
+	display inline-block
+	border 1px solid $snow
+	&:hover
+		background: darken($snow,5px)
+.cat-link__el--active
+	background: white
+	border 1px solid $border-color
+.cat-link-title
+	margin-bottom: 20px
+	margin-right: 20px
+	@extend .type--sm
+// cat-link === end
+
+// buble order
+.buble-order
+	flex(mid)
+	box-shadow 0 0 10px rgba(0, 0, 0, 0.07)
+	border-radius 10px
+	background-color #ffffff
+	width: 310px
+	height: 80px
+	padding: 15px 20px
+	br(10px)
+	position: fixed
+	z-index 10
+	bottom 60px
+	right: 20px
+	tr()
+	span
+		@extend .type--sm
+		font-weight 700
+		margin-right: 10px
+
+.buble-order.disable
+	transform translateX(150%)
+// buble order === end
+
+// item card
+.item-wrap
+	+below(768px)
+		fw()
+	f()
+	justify-content space-between
+	align-items: flex-start
+	margin-bottom: 50px
+.item-col
+	+below(768px)
+		width: 100%
+		margin 0 auto 30px auto
+	width: 45%
+.item-img
+	bg-full()
+	padding: 50% 10%
+	br(30px)
+.item-info
+	+below(768px)
+		min-width 100%
+		width: 100%
+		margin-left: 0
+	min-width 500px
+	width calc(55% - 50px)
+	margin-left: 20px
+.item-descr
+	margin-bottom: 20px
+	line-height: 1.6
+.item-size
+	margin-bottom: 20px
+.item-config-row
+	margin: 30px 0
+.ingr-row
+	f()
+	align-items center
+	justify-content space-between
+	padding: 10px 0
+	border-bottom 1px solid $border-color
+	@extend .type--sm
+	&:first-child
+		padding-top: 0
+.ingr-row--clear
+	padding: 0
+	margin-bottom: 15px
+	border 0
+
+.ingr-incr
+	+below(640px)
+		margin: 0 5px
+
+.ingr-name
+	width: 50%
+	ellipsis()
+.ingr-cost
+	+below(640px)
+		margin: 0 5px
+	width: 10%
+	color $gray
+	white-space nowrap
+.ingr-total
+	white-space nowrap
+.item-total
+	+below(1024px)
+		fw()
+	+below(640px)
+		fl()
+	f()
+	align-items center
+	margin-bottom: 40px
+	margin-top: 30px
+.item-total-wrap
+	+below(640px)
+		margin-right: 0
+	margin-right: 30px
+.item-total__info
+	@extend .type--sm
+	margin-bottom: 5px
+	color $red
+.item-total__cond
+	+below(640px)
+		margin: 20px 0
+	f()
+	align-items: flex-end
+.item-total__cost
+	@extend .type--lg
+	white-space nowrap
+	font-weight 700
+	line-height: .9
+	margin-right: 10px
+.item-total__weight
+	white-space nowrap
+.item-get
+	+below(640px)
+		margin: 0
+		width: 100%
+		.incr-btn--fix
+			width: 100%
+	margin-right: 20px
+.item-back
+	+below(1024px)
+		margin-top: 20px
+.item-prod
+	margin: 20px 0
+	@extend .type--sm
+// item card === end
+
+// structure
+.structure
+	+below(480px)
+		grid-template-columns: repeat(2, 1fr)
+	display: grid
+	grid-gap 10px
+	grid-template-columns: repeat(4, 1fr)
+	margin-bottom: 10px
+.structure-wrap
+	max-width 400px
+.structure__el
+	padding: 10px 5px
+	border 1px solid $border-color
+	br(10px)
+	flex(mid)
+	fl()
+.structure__el-name
+	@extend .type--xs
+
+.structure-text
+	+below(480px)
+		text-align center
+	text-align: right
+	@extend .type--xs
+	margin-bottom: 30px
+// structure === end
+
+// review
+.review
+	+below(768px)
+		fw()
+	f()
+	justify-content space-between
+	align-items: stretch
+	margin-bottom: 50px
+.review-wrap
+	+below(768px)
+		width: 100%
+		margin-bottom: 30px
+	width calc(100% - 390px)
+.review-msg
+	+below(768px)
+		width: 100%
+	width: 350px
+.msg
+	background: #f5f5f5
+	br(20px)
+	padding: 50px 70px
+	flex(mid)
+	fl()
+
+.msg__icon
+	margin-bottom: 10px
+.msg__title
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 10px
+.msg__text
+	text-align center
+	line-height: 1.4
+	margin-bottom: 20px
+	font-size: 14px
+
+.review__el
+	background-color #ffffff
+	margin-bottom: 20px
+	padding-bottom: 20px
+	border-bottom 1px solid #F5F5F5
+.review__el-info
+	+below(640px)
+		fw()
+	f()
+	align-items center
+	margin-bottom: 10px
+.review__el-name
+	+below(640px)
+		margin-bottom: 10px
+	font-weight 700
+	margin-right: 20px
+.review__el-date
+	color $gray
+	@extend .type--sm
+.review__el-text
+	line-height: 1.6
+
+.answer
+	margin-top: 20px
+
+.answer-head__icon
+	margin-bottom: 10px
+.answer-head__name
+	@extend .type--lg
+	font-weight 700
+.answer-text
+	padding-left: 50px
+	p
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+.loader
+	flex(mid)
+	margin: 30px 0
+
+
+.review-star
+	f()
+	.icon
+		fill $red
+		margin-right: 5px
+		size 16px
+// review === end

@@ -39,6 +39,8 @@ mixin product(img="item-1.jpg",size)
     .product-el-wrap
       a(href="#" class = size? "product__img--lg":'').product__img
         .product__img-el(style="background-image:url('img/"+img+"')")
+        .product-el-tag-wrap
+          .product-el-tag-el(style="background:#b40007") Хит
         .product-el--add
           +icon("cart-empty","icon")
           .product-el--add-val 2
@@ -61,18 +63,24 @@ mixin product(img="item-1.jpg",size)
 
 
 
-
-
 mixin product-sm(img="item-1.jpg",size)
-  .product-el.product-el--sm.js-slide-parrent
-    .product-el--add
-      +icon("cart-empty","icon")
-      .product-el--add-val 2
-    a(href="#" class = size? "product__img--lg":'').product__img
-      .product__img-el(style="background-image:url('img/"+img+"')")
-    .product__cont
-      a(href="#").product__title Капрічоза
-      .product-footer
-        .product-price 250 ₴
-        .item-add
-          +incr(false,"incr--single incr--mdx incr--mark-light ")
+  .product-el.product-el--sm
+    .product-el-wrap
+      a(href="#" class = size ? "product__img--lg" : '').product__img
+        .product__img-el(style="background-image:url('img/" + img + "')")
+        .product-el--add
+          +icon("cart-empty","icon")
+          .product-el--add-val 2
+      .product__cont
+        a(href="#").product__title Цезарь с рыбой
+        .product-footer
+          .product-price 935 ₸
+          .item-add
+            +icon("plus","icon")
+
+
+mixin bread()
+  .bread
+    a(href="#").bread__el Главная
+    a(href="#").bread__el Категория
+    .bread__el Товар

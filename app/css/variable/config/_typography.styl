@@ -86,6 +86,9 @@ font-size 48px
 .title--xl
 	@extend .type--xl
 
+.title--clear
+	margin-bottom: 10px
+
 h5
 	@extend .type--sm
 h4
@@ -154,6 +157,9 @@ p
 .icon--md
 	size 24px
 
+.icon--lg
+	size 30px
+
 .icon--left
 	margin-left: 10px
 
@@ -166,3 +172,66 @@ p
 .icon--gray
 	fill $gray
 // icons === end
+
+// title rows
+.title-row
+	+below(640px)
+		margin-bottom: 30px
+		flex-wrap nowrap
+		align-items: flex-start
+	position: relative
+	font-weight: 700
+	margin-bottom: 30px
+	f()
+	fw()
+	align-items center
+	.icon
+		+below(768px)
+			size 25px
+		tr(all)
+		size 50px
+		fill $mark
+		&:hover
+			fill black
+	.title
+		+below(640px)
+			width: 100%
+			margin-right: 0
+		margin-bottom: 0
+		margin-right: 20px
+		margin-top: -5px
+	.arrow
+		+below(640px)
+			display none
+		fill $mark
+		margin-right: 25px
+.arrow
+	flex(mid)
+	round()
+	flex(mid)
+	tr()
+	cp()
+	size 50px
+	border 2px solid $mark
+	&:hover
+		background: $mark
+		.icon
+			fill white
+	&:active
+		.icon
+			fill $red!important
+	.icon
+		tr()
+		size 14px
+		fill $mark
+.title-row--btn
+	+below(768px)
+		fw()
+	flex(between)
+.title-row-info
+	+below(768px)
+		margin-bottom: 20px
+		width: 100%
+	f()
+	align-items center
+// title rows === end

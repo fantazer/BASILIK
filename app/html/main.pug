@@ -31,12 +31,84 @@ include block_html/_include.pug
 				each item,i in items
 					a(href="#" style="background-image:url('img/btn-bg-"+(i+1)+".jpg')").kind__sm-el
 						span #{item}
-			// popular
-			.title.title--xl.type--center Популярное
+
+			//NOTE !!! colors tags => Классика - #111415; Вок - #45010b; Шоколадно - #6d2200; Хит - #b40007; Остро - #ff3d00; Новинка - #fe54a1; По-новому - #ffc400; Полезно - #ff9900; Микс - #afcb08; Летний - #65be05; Basilic - #3ead48; Шалом - #006e35; После еды - #00b49b; Рыбно - #3070b9; Популярно - #4032a2; Домашние - #8e00c1;
+
+			.section-title Блюда на компанию
 			.product-cont
 				- for (var i=0;i< 7;i++)
 					+product()
+
+			.section-title Завтраки
+			.product-cont
+				- for (var i=0;i< 6;i++)
+					+product("item-4.jpg")
 			.btn-row-mid
 				a(href="#").product-more.btn--sm.btn--light.btn--mobile показать еще
+
+		.app-wrap
+			.main-cont
+				.app
+					.app-img
+						img(src="img/app-phone.png", alt="")
+					.app-cont
+						.app-title Скачайте приложение Basilic и получи <span class="type--mark">500 бонусов</span> после первого заказа уже сегодня
+						.app-text Станьте участником программы лояльности и получайте десятки бонусов ежедневно. Теперь любимые блюда всегда в вашем смартфоне.
+						.app-row
+							a(href="#").app-row__el
+								img(src="img/qr.png", alt="")
+							a(href="#").app-row__el
+								img(src="img/app-google.png", alt="")
+							a(href="#").app-row__el
+								img(src="img/app-apple.png", alt="")
+						.app-adv
+							.app-adv__el
+								+icon("pocket","icon")
+								span Оплачивайте заказы бонусами со смартфона
+							.app-adv__el
+								+icon("mail","icon")
+								span Мгновенно узнавайте о новых блюдах, акциях и скидках
+							.app-adv__el
+								+icon("key","icon")
+								span Доступ к полной информации о продуктах
+							.app-adv__el
+								+icon("like","icon")
+								span Быстрый и удобный заказ в два клика
+
+		.main-cont
+			.section-title Завтраки
+			.product-cont
+				- for (var i=0;i< 6;i++)
+					+product("item-3.jpg")
+			.btn-row-mid
+				a(href="#").product-more.btn--sm.btn--light.btn--mobile Показать все 45 блюд
+
+			.section-title Акции и новости
+			.sale-list
+				- for (var i=0;i<4;i++)
+					a(href="#").sale-el
+						.sale-el__img(style="background-image:url('img/sale-"+(i+1)+".jpg')")
+						.sale-el__title Съешь плов и выиграй 50 000 тенге!
+						//.sale-el__text Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..
+						//.sale-el__date
+							+icon("clock","icon icon--sm icon--right icon--gray")
+							span Акция действует до 21 августа 2020 г
+			.btn-row-mid
+				a(href="#").product-more.btn--sm.btn--light.btn--mobile Показать все акции
+			// seo text
+			.title.title--md Добро пожаловать на «Территорию вкусной еды Basilic»
+			.seo-text.text
+				p  Basilic – то место, где вкусно и правильно готовят из самых свежих продуктов. Качество еды в твоей тарелке – наш приоритет! Мы собрали лучшее из кухонь мира, чтобы познакомить тебя с традициями питания разных стран. У нас ты найдешь и плов, и лазанью, и окрошку, и баурсаки. Никаких искусственных красителей, добавок, ГМО и прочих вредностей! Только натуральные продукты, проверенные поставщики, профессиональный подход и чистые руки в одноразовых перчатках!
+
+				p  Приходи сам и большой компанией. Basilic может принять одновременно 416 гостей. У нас приятная атмосфера и современный дизайнерский интерьер. Ты не потратишь много денег, пообедав у нас. Нам не просто это дается, но мы держим отличные цены.
+			.seo-text--add.text.js-commutator-cont.drop(data-item="seo")
+				p  Приходи сам и большой компанией. Basilic может принять одновременно 416 гостей. У нас приятная атмосфера и современный дизайнерский интерьер. Ты не потратишь много денег, пообедав у нас. Нам не просто это дается, но мы держим отличные цены.
+				p  Basilic – то место, где вкусно и правильно готовят из самых свежих продуктов. Качество еды в твоей тарелке – наш приоритет! Мы собрали лучшее из кухонь мира, чтобы познакомить тебя с традициями питания разных стран. У нас ты найдешь и плов, и лазанью, и окрошку, и баурсаки. Никаких искусственных красителей, добавок, ГМО и прочих вредностей! Только натуральные продукты, проверенные поставщики, профессиональный подход и чистые руки в одноразовых перчатках!
+
+			.icon-row.toggle-seo.js-commutator-el(data-item="seo")
+				span.type--mark.type--false Показать еще
+				span.type--red.type--true Скрыть
+				+icon("arrow-down","icon icon--sm icon--gray icon--left")
+		// seo text === end
 	+footer()
 include ./block_html/_script.pug

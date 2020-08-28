@@ -1,0 +1,104 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			+bread()
+			.item-wrap
+				.item-col
+					.item-img(style="background-image:url('img/item-card-1.jpg')")
+				// item-info
+				.item-info
+					.title.title--xl.title--clear Цезарь
+					.item-descr Салат айсберг, заправленный соусом «Цезарь», украшен помидорами черри, посыпан пармезаном и крутонами, с куриной грудкой на гриле.
+					.item-prod <span class="type--gray">Производитель</span> "Хладик" - Россия, Казань
+					// size
+					.item-size
+						.size.size--sm
+							.size__el.size__el--active 200 г
+							.size__el 400 г
+							.size__el 800 г
+					// size === end
+
+					// item-config
+					.item-config-row
+						.title.title--clear Ингридиенты
+						- for (var i=0;i<12;i++)
+							.ingr-row
+								.ingr-name Бекон <span class="type--gray">/ 75г</span>
+								.ingr-cost 16 ₸
+								.ingr-incr
+									+incr(false,"incr--single incr--mark-light incr--sm")
+								.ingr-total 32 ₸
+					//  === end
+					.item-condition-wrap
+						// item total
+						.item-total
+							.item-total-wrap
+								.item-total__info старая цена 299 ₴
+								.item-total__cond
+									.item-total__cost 250 ₴
+									.item-total__weight 350 г
+							.item-get
+								.incr-btn.incr-btn--fix
+									.incr-btn__el.btn--md.btn--mark Купить
+									.incr-btn-wrap
+										+incr(1,"incr--mark")
+							a(href="#").item-back.icon-row
+								+icon("arrow-round-left","icon icon--mark icon--lg icon--right")
+								span.type--sm назад в раздел
+
+						// item total === end
+
+						// structure
+						.structure-wrap
+							.structure
+								.structure__el
+									.structure__el-name калории
+									.structure__el-val 2841
+								.structure__el
+									.structure__el-name белки
+									.structure__el-val 75,4
+								.structure__el
+									.structure__el-name жиры
+									.structure__el-val 111,5
+								.structure__el
+									.structure__el-name углеводы
+									.structure__el-val 198,2
+							.structure-text энергетическая ценность указана за 100 г
+						// structure === end
+
+				// item-info === end
+			.title-row.title-row--btn
+				.title-row-info
+					.title.title--md Оставить отзыв
+					.btn--sm.btn--light Написать отзыв
+			.review
+				.review-wrap
+					- for (var j=0;j<2;j++)
+						.review__el
+							.review__el-info
+								.review__el-name Марина
+								.review-star
+									- for (var i=0;i<4;i++)
+										+icon("star","icon")
+							.review__el-date 15 марта 2019 13:04
+							.review__el-text.text
+								p Піцца смачна. Доставка швидка. Проте кур‘єр відмовився занести замовлення на 10 поверх. Ліфт працює, домофон також. Аргументував це тим, що у будинку термінал не проведе оплату. Робіть щось із кур‘єрами, або з терміналами.
+							.answer
+								.answer-head__icon
+									img(src="img/logo-line--simple.png", alt="")
+								.answer-text.text
+									p Благодарим за приятные слова! Довольные покупатели - наша лучшая награда.
+
+
+			// recommend
+			.title.title--lg С этим блюдом часто покупают
+			.product-cont.product-cont--four
+				- for (var i=0;i< 4;i++)
+					+product-sm("item-4.jpg")
+			// recommend === end
+	+footer()
+include ./block_html/_script.pug

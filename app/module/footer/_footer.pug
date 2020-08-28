@@ -1,3 +1,24 @@
 mixin footer()
 	//block footer
+	.footer
+		.footer-nav
+			a(href="#").footer-nav__el Акции и новости
+			a(href="#").footer-nav__el Доставка и оплата
+			a(href="#").footer-nav__el Отзывы
+			a(href="#").footer-nav__el Рестораны
+			a(href="#").footer-nav__el Вакансии
+			a(href="#").footer-nav__el Наши гости
+			a(href="#").footer-nav__el О нас
+			a(href="#").footer-nav__el Публичная оферта
+			a(href="#").footer-nav__el Политика конфиденциальности
+		.soc-row
+			a(href="#").soc-row__el
+				+icon("soc-facebook","icon")
+			a(href="#").soc-row__el
+				+icon("soc-instagram","icon")
+		.footer-payment
+			img(src="img/payment.svg", alt="")
+		a(href="#").create
+			span Создано в:
+			img(src="img/jq.svg", alt="")
 	//block footer end

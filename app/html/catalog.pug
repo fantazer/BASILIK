@@ -1,0 +1,42 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			+bread()
+			.title.title--xl.type--center Завтраки
+			//NOTE !!! colors tags => Классика - #111415; Вок - #45010b; Шоколадно - #6d2200; Хит - #b40007; Остро - #ff3d00; Новинка - #fe54a1; По-новому - #ffc400; Полезно - #ff9900; Микс - #afcb08; Летний - #65be05; Basilic - #3ead48; Шалом - #006e35; После еды - #00b49b; Рыбно - #3070b9; Популярно - #4032a2; Домашние - #8e00c1;
+			.sort
+				.sort__el
+					.sort-title Показывать
+					.sort-tag-wrap
+						.sort-tag(style="background:#fe54a1") Новинка
+						.sort-tag(style="background:#006e35") Шалом
+						.sort-tag(style="background:#4032a2") Популярно
+				.sort__el
+					.sort-title Выводить
+					.sort-tag-wrap
+						.dropdown.dropdown--light
+							input(type="hidden" name="name" value="0")
+							.dropdown-current
+								.dropdown-current__val Сначала дорогие
+								+icon("arrow-down-fat","icon")
+							.dropdown-menu
+								.dropdown-menu__el(data-value="#") Сначала дорогие
+								.dropdown-menu__el(data-value="#") Сначала дешевые
+			.product-cont
+				- for (var i=0;i<8;i++)
+					+product()
+			.cat-link
+				.cat-link-title Перейти в раздел
+				each item,i in headerNav
+					a(href="#").cat-link__el(class=i===4?'cat-link__el--active':'') #{item}
+
+			// Toggle class  .disable for animation visible
+			.buble-order.disable
+				span Кто-то только что сделал заказ
+				img(src="img/pan.svg", alt="")
+	+footer()
+include ./block_html/_script.pug

@@ -291,7 +291,7 @@
 		display: block
 
 .incr-btn--fix
-	width: 180px
+	width: 220px
 	height: 80px
 	flex(mid)
 	background: $mark
@@ -307,6 +307,7 @@
 		size 60px
 		padding: 0
 		flex(mid)
+		margin 0 10px
 	.incr
 		height: 100%
 		width: 100%
@@ -318,3 +319,97 @@
 	@extend .type--md
 	font-weight: 700
 // incr === end
+
+// ===============
+.incr--mark
+	.incr__nav
+		background: $mark
+		border 0
+		&:hover
+			background: darken($mark,10)
+		&:active
+			background:lighten($mark,10)
+		.icon
+			fill white
+
+.incr--mark-light
+	.incr__nav
+		border 1px solid $mark
+		&:hover
+			background: $mark
+			.icon
+				fill white
+		&:active
+			background:lighten($mark,10)
+		.icon
+			fill $mark
+
+
+.incr--red
+	.incr__nav
+		background: $red
+		border 0
+		&:hover
+			background: darken($red,10)
+		&:active
+			background:darken($red,20)
+		.icon
+			fill white
+
+.incr--red-light
+	.incr__nav
+		border 1px solid $red
+		&:hover
+			background: $red
+			.icon
+				fill white
+		&:active
+			background:darken($red,10)
+		.icon
+			fill $red
+
+.incr--sm
+	.incr__nav
+		size 24px
+		.icon
+			size 10px
+	.incr__val
+		padding: 0 10px
+		min-width 35px
+.incr--mdx
+	.incr__nav
+		size 32px
+		.icon
+			size 12px
+	.incr__val
+		padding: 0 10px
+
+.incr--single
+	.incr__val
+		opacity 0
+		transition none
+	.incr__minus
+		opacity 0
+
+.incr--single-active
+	.incr__val
+		opacity 1
+
+	.incr__minus
+		opacity 1
+
+.incr--single
+	.incr__val
+		opacity 0
+		transition none
+	.incr__minus
+		opacity 0
+
+.incr--single-active
+	.incr__val
+		opacity 1
+
+	.incr__minus
+		opacity 1
+
+// ===============
