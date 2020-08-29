@@ -754,7 +754,7 @@ body
 	border 1px solid $mark
 	.size__el--active
 		background: $mark
-		color white
+		color white!important
 	.size__el
 		+above(641px)
 			border-right 1px solid $mark
@@ -762,17 +762,18 @@ body
 			border 0
 
 .size--lg
-	br(30px)
+	br(10px)
 	.size__el
 		padding: 20px 10px
 		font-weight: 700
 		border-left 1px solid $gray-light
 		border-right 1px solid $gray-light
+		color black
 		&:first-child
-			border-radius 30px 0 0 30px
+			border-radius 10px 0 0 10px
 			border 0
 		&:last-child
-			border-radius 0 30px 30px 0
+			border-radius 0 10px 10px 0
 			border 0
 
 .size--column
@@ -1791,3 +1792,536 @@ body
 		margin-right: 5px
 		size 16px
 // review === end
+
+// order
+.order
+	+below(968px)
+		fw()
+	f()
+	justify-content:space-between
+	align-items streth
+
+.order-cont
+	+below(960px)
+		fw()
+		margin-bottom: 50px
+	f()
+	justify-content space-between
+	align-items: flex-start
+	width: 100%
+
+.total
+	+below(960px)
+		width: 100%
+		max-width 640px
+		margin: 0 auto
+	width: calc(33% - 20px)
+	margin-left auto
+.total-title
+	@extend .type--md
+	font-weight: 700
+	margin-bottom: 30px
+.total-row
+	flex(between)
+	margin-bottom: 10px
+.total-row__val
+	font-weight: 700
+	@extend .type--md
+	white-space nowrap
+.total-text
+	@extend .type--md
+	margin-bottom: 10px
+	line-height: 1.6
+	font-size: 14px
+.total-cost
+	flex(between)
+	padding-top: 20px
+	margin-top: 20px
+	border-top 1px solid $border-color
+	margin-bottom: 30px
+
+.total-cost__text
+	font-weight 700
+	@extend .type--md
+.total-cost__val
+	font-weight 700
+	@extend .type--lg
+
+.total-get
+	@extend .btn--md
+	@extend .btn--mark
+	padding: 20px 50px
+	width: 100%
+
+
+.order__el-info
+	+below(640px)
+		fl()
+		justify-content center
+	f()
+	align-items center
+	width: 60%
+.order__el
+	+below(640px)
+		fw()
+		flex(mid)
+		fl()
+		position: relative
+	display flex!important
+	flex(between)
+	padding: 10px 0
+	outline none!important
+	margin-bottom: 10px
+	border-bottom 1px solid $border-color
+.order__img
+	+below(640px)
+			margin-right: 0
+			height: 150px
+			width: 150px
+	size 90px
+	br(5px)
+	bg-full()
+	background-size: contain
+	margin-right: 20px
+
+.order__name
+	width calc(100% - 100px)
+	margin-right: 10px
+.order__name-text
+	+below(640px)
+			font-size: 20px
+			margin-bottom: 20px
+			text-align: center
+	tr()
+	margin-bottom: 5px
+	font-weight 700
+	color $dark
+	display block
+	&:hover
+			color $mark
+.order__adds
+	+below(640px)
+		width: 100%
+		text-align center
+		margin-bottom: 10px
+	font-size: 12px
+	color $gray
+.order__el-change
+	+below(640px)
+		width: 100%
+		fl()
+	f()
+	align-items center
+	width: 40%
+	justify-content space-between
+
+.order__inc
+	+below(640px)
+		.incr
+			width: auto
+
+.order__price
+	+below(768px)
+		margin: 20px 0
+		font-size: 20px
+		margin-right:initial
+		text-align center
+	font-weight 700
+	white-space nowrap
+.order__price-val--sale
+	color $red
+	margin-bottom: 5px
+	font-size: 12px
+	font-weight: 400
+.order__delete
+	+below(640px)
+		position absolute
+		top 0
+		right: 0
+	margin-left: 20px
+	.icon
+		cp()
+		tr(all)
+		size 22px
+		fill #e0e0e0
+		&:hover
+			fill black
+
+.order-item
+	+below(960px)
+		margin-bottom: 20px
+		width: 100%
+	width: 62%
+
+.order-add
+	+below(1024px)
+		grid-template-columns: repeat(3, 1fr)
+	+below(640px)
+		grid-template-columns: repeat(2, 1fr)
+		margin-bottom: 0
+	+below(480px)
+		grid-template-columns: 1fr
+	display: grid
+	grid-gap 40px
+	grid-template-columns: repeat(4, 1fr)
+	margin-bottom: 80px
+
+.order-add--sm
+	+below(480px)
+		grid-template-columns: 1fr
+	grid-gap 10px
+	grid-template-columns: repeat(auto-fill, minmax(10rem,1fr))
+
+
+.order__el-wrap
+	margin-bottom: 60px
+
+// steps
+.steps
+	+below(1024px)
+		display none
+	f()
+	justify-content space-between
+	width: 100%
+	margin-bottom: 30px
+.step__el
+	f()
+	fl()
+	position relative
+	pointer-events none
+	align-items center
+.step-line
+	height: 1px
+	width: 140%
+	margin-top: 15px
+	border 1px dashed $border-color
+.step__el-val
+	size 60px 30px
+	border 1px dashed $border-color
+	flex(mid)
+	font-weight: 700
+	margin-bottom: 10px
+	color $gray
+	br(4px)
+
+.step__el-name
+	@extend .type--sm
+	text-align center
+	color $gray
+	font-size: 10px
+.step__el--current
+	&:before
+		content ''
+		background: $mark
+	.step__el-val
+		background:black
+		color white
+		border-color black
+	.step__el-name
+		color black
+
+.step__el--active
+	pointer-events initial
+	.step__el-name
+		color black
+	.step__el-val
+		background:$mark
+		border-color $mark
+		color white
+// steps === end
+
+.total-info
+	f()
+	align-items center
+	margin-top: 20px
+.total-info__icon
+	size 60px
+	br(5px)
+	border 1px solid $mark
+	flex(mid)
+	margin-right: 20px
+	.icon
+		fill $mark
+		size 40px
+.total-info__cont
+	width calc(100% - 80px)
+.total-info__title
+	font-weight: 700
+	margin-bottom: 5px
+	@extend .type--md
+	color $mark
+.total-info__text
+	font-size: 12px
+// order === end
+
+// order step 2
+.order-form
+	+below(1024px)
+		width: 100%
+		margin-bottom: 40px
+	+below(640px)
+		margin-right: 0
+	width: 60%
+	margin-right: 20px
+
+.order-condition
+	+below(960px)
+		width: 100%
+	width: calc(30% - 20px)
+	margin-left auto
+	.input-get__btn
+		padding: 10px
+.form-block
+	margin-bottom: 10px
+
+.direction--sm
+	display: grid
+	grid-column-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(14rem,1fr))
+.direction-el
+	padding: 25px 25px 25px 30px
+	br(20px)
+	cp()
+	border 1px solid $border-color
+	margin-bottom: 20px
+	position relative
+	overflow hidden
+	&:before
+		content ''
+		position absolute
+		top 0
+		left 0
+		width: 10px
+		height: 100%
+		background: $snow
+.direction-el__title
+	font-weight: 700
+	margin-bottom: 10px
+.direction-el__text
+	+below(640px)
+		font-size: 12px
+		line-height: 1.4
+	@extend .type--sm
+.direction-el.active
+	&:before
+		content ''
+		background: $mark
+
+.direction-el-add
+	f()
+	cp()
+	align-items center
+	margin-bottom: 30px
+	span
+		color $brown
+	.icon-block
+		margin-right: 20px
+
+.goods-list
+	margin-bottom: 20px
+
+.goods-list__el
+	flex(between)
+	margin-bottom: 10px
+	@extend .type--sm
+	&:last-child
+		margin-bottom: 0
+.goods-list__el-name
+	width: 65%
+	color $gray
+	white-space nowrap
+	text-overflow ellipsis
+	overflow hidden
+
+.goods-list__el-val
+	width: 15%
+	text-align center
+.goods-list__el-cost
+	white-space nowrap
+	width: 20%
+	text-align: right
+	color $gray
+
+.order-total
+	+below(640px)
+		width: 100%
+		text-align center
+	border-top 1px solid $border-color
+	flex(between)
+	padding-top: 20px
+	margin: 20px 0
+.order-total__text
+	+below(640px)
+		text-align center
+		width: 100%
+	margin-right: 10px
+	@extend .type--md
+	font-weight 700
+
+.order-total__val
+	+below(640px)
+		width: 100%
+		text-align center
+		font-size: 38px
+	@extend .type--md
+	font-weight: 700
+
+// range slider
+.range__wrap
+	margin-bottom 70px
+	margin-top: 30px
+	position relative
+	.irs-hidden-input
+		display none!important
+	.irs-bar-edge
+		background $mark
+		height 15px
+		border-radius 10px 0px 0px 10px
+		width 25px
+	.irs-bar
+		height 15px
+		background $mark
+		br(10px)
+	.irs-line-left
+		height 15px
+		border-radius 10px 0px 0px 10px
+		background $snow
+	.irs-line-right
+		height 15px
+		background $snow
+		border-radius 0px 10px 10px 0px
+	.irs-line-mid
+		background $snow
+		height 15px
+	.irs-line
+		height 15px
+	.single
+		background: $mark
+		size 25px
+		br(5px)
+		top 20px
+	.irs-slider
+		width 45px
+		height 30px
+	.irs-min, .irs-max
+		display none
+	.irs-single
+		&:before
+			content ''
+			display none
+		top 55px
+		background transparent
+		color black
+		font-size: 18px
+	.irs--flat .irs-handle > i:first-child
+		display none
+	.irs--flat .irs-line
+		background: #F8F8F8
+		border 1px solid $border-color
+		border-radius 10px
+// range slider === end
+
+
+.range-head
+	+below(640px)
+		fw()
+	flex(between)
+.range-title
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+	@extend .type--md
+	font-weight: 700
+.range-head__info
+	f()
+	align-items center
+	.icon
+		size 18px
+		fill $mark
+.range-head__val
+	@extend .type--md
+	margin: 0 10px
+	color $red
+	font-weight: 700
+// order step 2 === end
+
+.icon-block
+	size 40px
+	flex(mid)
+	br(10px)
+	.icon
+		size 16px
+
+.icon-block--mark
+	background: $mark
+	&:active
+		.icon
+			fill $red
+	.icon
+		fill white
+
+.icon-block--empty
+	border 2px solid $mark
+	&:active
+		.icon
+			fill $red
+	.icon
+		fill $mark
+
+// template nice-select
+.nice-select
+	br(20px)
+	display: block
+	color #000000
+	font-size 14px
+	font-weight 700
+	margin-bottom: 0
+	height: 55px
+	float none
+	f()
+	align-items center
+	padding: 10px 30px
+	&:after
+		content ''
+		size 7px
+		right: 20px
+	.list
+		width: 100%
+		left 0px
+		border-radius 0 0 20px 20px
+		border 0px solid $border-color
+		border-top 0
+		margin-top: 0
+		max-height 150px
+		overflow-y auto
+		li
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+		.current //max width dots
+			display block
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			max-width 100%
+			width: 100%
+			text-align: left
+
+.nice-select.open
+	border-radius 20px 20px 0 0
+
+select.select-beauty
+	display: none!important
+
+.element-select
+	padding: 20px 0
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid $border-color
+
+// template nice-select === end
+
+.col-2
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(8rem,1fr))

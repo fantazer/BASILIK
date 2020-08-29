@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	// nice select
-	//$('.select-beauty').niceSelect();
+	$('.select-beauty').niceSelect();
 	// nice select === end
 
 	//modals
@@ -114,20 +114,49 @@ $(document).ready(function () {
 	//toggle class + neighbor === end
 
 	//toggle class + parent
-	$('.js-switch').click(function(){
+	$('.js-slide').click(function(){
 		var thisItem = $(this).data("item");
 		var isEach = $(this).data("each") || false;
-		var parrent = $(this).closest(".js-switch-parrent");
+		var parrent = $(this).closest(".js-slide-parrent");
 		$(this).toggleClass("active")
 		var selector;
-		selector = $(".js-switch[data-item=" + thisItem + "")
+		selector = $(".js-slide[data-item=" + thisItem + "]")
 		if(isEach){
 			selector.not(this).removeClass('active')
-			selector.not(this).closest(".js-switch-parrent").find(".js-switch-cont").removeClass('active')
+			selector.not(this).closest(".js-slide-parrent").find(".js-slide-cont").removeClass('active')
 		}
-		parrent.find(".js-switch-cont[data-item=" + thisItem + "]").toggleClass('active')
+		parrent.find(".js-slide-cont[data-item=" + thisItem + "]").toggleClass('active')
 	})
 	//toggle class + parent === end
+
+	// switch
+	$('.js-switch').click(function () {
+		var typeItem = $(this).data("item");
+		var groupItem = $(this).data("group");
+		var size = 0;
+		$('.js-switch').each(function () {
+			if ($(this).data("item") === typeItem) {
+				$(this).removeClass("active");
+				 size = $(this).size();
+			}
+			return size;
+		});
+		$('.js-switch-cont').each(function () {
+			if ($(this).data("group") === groupItem) {
+				if ($(this).data("item") === typeItem) {
+					if(size===1){
+						$(this).toggleClass("hidden")
+					}else{
+						$(this).removeClass("hidden")
+					}
+				} else {
+					$(this).addClass("hidden");
+				}
+			}
+		});
+		$(this).addClass("active");
+	});
+	// switch === end
 
 	// incr
 	var incrEl= {}
@@ -281,7 +310,41 @@ $(document).ready(function () {
 		}
 	});
 	// toggle sort tag === end
-	
+
+	// template scroll
+	var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+	if(!isMac && $(document).width() > 640) {
+		$(".scroll").niceScroll({
+			autohidemode: false,
+			cursorcolor: "#dcdcdc",
+			scrollspeed: 160, // scrolling speed
+			mousescrollstep: 10,
+		});
+	}
+	// template scroll === end
+
+	// rating
+	$('.star--edit .star-el').hover(function () {
+		if (!$(this).parent().hasClass('star--fix')) {
+			$('.star .star-el').removeClass('star-el--active');
+			$(this).addClass('star-el--active');
+			$(this).prevAll('.star-el').addClass('star-el--active')
+		}
+	});
+	$('.star--edit .star-el').click(function () {
+		$(this).parent().toggleClass('star--fix');
+		$(this).addClass('star-el--active');
+		$(this).prevAll('.star-el').addClass('star-el--active')
+	});
+	// rating === end
+
+	//range slider
+  $(".range").ionRangeSlider({
+ 		//prefix: "Списать ",
+ 		//postfix: " баллов"
+ 	})
+	//range slider === end
+
 	//window.condition = {};
 	//window.condition.info = info;
 });

@@ -4,11 +4,12 @@
 	border 1px solid $border-color
 	resize: none
 	outline: 0 !important
-	border-radius 10px
+	border-radius 5px
 	font-family $v-font
 	display block
 	placeholder(#888888)
 	tr(all)
+	font-size: 14px
 	&:focus
 		border 1px solid $mark
 		background: white
@@ -117,7 +118,7 @@
 	color red
 	margin: 10px 0
 	display none
-
+	font-size: 14px
 .input-cont
 	+below(640px)
 		grid-row-gap 0
@@ -142,12 +143,11 @@
 //checkbox remember
 .login-remember
 	.style-label
-		+below(768px)
-			align-items: flex-start
+		align-items: flex-start
 	.style-input-text
 		font-size: 14px
 		color black
-		width: calc(100% - 80px)
+		width: calc(100% - 40px)
 		line-height: 1.6
 		margin-top: 3px
 		a
@@ -157,11 +157,20 @@
 .input-get
 	f()
 	align-items stretch
-	margin-bottom: 20px
 	.input
-		border-radius 5px 0 0 5px
+		border-radius 10px 0 0 10px
 .input-get__btn
 	position relative
+	background: $mark
+	border-radius 0 10px 10px 0
+	border 0
+	flex(mid)
+	cp()
+	tr()
+	color white
+	font-size: 14px
+	&:hover
+		background: darken($mark,5)
 	.icon
 		position absolute
 		size 14px
@@ -170,14 +179,14 @@
 		left 50%
 		margin-left: -7px
 		margin-top: -7px
-	.input-get__btn-el
-		height: 100%
-		background: $mark
-		border-radius 0 5px 5px 0
-		border 0
-		width: 60px
-		&:hover
-			background: darken($mark,5)
+.input-get__btn-el
+	height: 100%
+	background: $mark
+	border-radius 0 5px 5px 0
+	border 0
+	width: 60px
+	&:hover
+		background: darken($mark,5)
 
 //upload
 .upload-wrap
@@ -244,6 +253,10 @@
 	position: absolute
 	left -9999px
 // form === end
+
+.input-row--middle
+	f()
+	align-items center
 
 // incr
 .incr
