@@ -394,7 +394,7 @@ gulp.task('build:ftp',function(){
 				'make',
 				//'zip',
 				//'guide',
-				'ftp'
+				//'ftp'
 				//'template'
 		)
 });

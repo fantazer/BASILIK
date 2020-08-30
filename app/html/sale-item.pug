@@ -1,0 +1,38 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.main-cont
+				.info-banner(style="background-image:url('img/sale-full.jpg')")
+				.title-row
+					.arrow(onclick="window.history.go(-1); return false;")
+						+icon("arrow-conner-left","icon")
+					.title.title--lg Скидка в день рождения!
+				.info-descr.text
+					.sale-date
+						+icon("clock","icon")
+						span Действует до 21 августа 2020 г
+					p Возможность получить скидку действует в течение 7-ми дней (в День рождения и 6 дней после Дня рождения)*
+
+					p Скидка распространяется на все меню представленное на этом сайте **
+
+					p * При себе необходимо иметь документ, в котором указана дата вашего Дня рождения.
+
+					p ** Скидка НЕ суммируется с другими скидками («Счастливые часы», «Красная цена») и НЕ действует на блюда из разделов: Бизнес-Ланчи, Завтраки, Детское меню, Саке Шок, Коктейль Шок.
+
+				.title.title--lg.type--center  Другие акции
+				.sale-list--lg
+					- for (var i=0;i<3;i++)
+						a(href="#").sale-el
+							.sale-el__img(style="background-image:url('img/sale-" + (i + 1) + ".jpg')")
+							.sale-el__title Съешь плов и выиграй 50 000 тенге!
+							.sale-el__text Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..
+							.sale-el__date
+								+icon("clock","icon icon--sm icon--right icon--gray")
+								span Акция действует до 21 августа 2020 г
+
+	+footer()
+include ./block_html/_script.pug

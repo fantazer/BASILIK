@@ -177,7 +177,7 @@ p
 .title-row
 	+below(640px)
 		margin-bottom: 30px
-		flex-wrap nowrap
+		//flex-wrap nowrap
 		align-items: flex-start
 	position: relative
 	font-weight: 700
@@ -205,6 +205,13 @@ p
 			display none
 		fill $mark
 		margin-right: 25px
+	.size
+		+below(768px)
+			width: 100%
+			margin: 0
+			margin-top: 20px
+		margin-left auto
+		width: 30%
 .arrow
 	flex(mid)
 	flex(mid)
@@ -235,3 +242,36 @@ p
 	f()
 	align-items center
 // title rows === end
+
+// sale-item
+.info-banner
+	+below(768px)
+		margin: 0 0 30px 0
+		padding: 20% 10%
+		br(0)
+		margin-left: -10px
+		width calc(100% + 20px)
+	bg-full()
+	br(20px)
+	padding: 15% 10%
+	margin 0 0 50px 0
+
+.sale-date
+	f()
+	@extend .type--sm
+	align-items center
+	color $gray
+	margin-bottom: 30px
+	.icon
+		size 20px
+		fill $gray
+		margin-right: 10px
+
+.info-descr
+	+below(768px)
+		padding-left: 0
+		margin-top: 0
+	padding-left: 75px
+	margin-top: -20px
+	margin-bottom: 50px
+// sale-item === end

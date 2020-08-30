@@ -1,7 +1,7 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-.page
+.page.page--gray
 	+header()
 	.content.content--gray
 		//product-cont
@@ -37,8 +37,8 @@ include block_html/_include.pug
 										// for bonus = 0
 									.profile-footer__text мои бонусы:
 									.profile-footer__val 2500
-								.profile-footer__icon
-									+icon("info","icon")
+									.profile-footer__icon
+										+icon("info","icon")
 					a(href="#").exit
 						.icon-block.icon-block--mark
 							+icon("exit","icon")
@@ -81,11 +81,12 @@ include block_html/_include.pug
 											.history-card__date 28 Сентября, 2017
 											.history-card__numb № 43576
 										.history-card__list
-											- for (var i=0;i<3;i++)
+											- for (var i=0;i<4;i++)
 												a(href="#" style="background-image:url('img/item-1.jpg')").history-card__list-el
 													.history-card__list-el-val x2
-											.history-card__list-el.history-card__list-el--last(style="background-image:url('img/card.jpg')")
+											.history-card__list-el.history-card__list-el--last
 												.history-card__list-el-val +2
+
 										.history-card__price
 											.history-card__price_val 5430 ₸
 									.history-info
@@ -102,16 +103,13 @@ include block_html/_include.pug
 														.history-info__el-text Традиционное, 35 см
 													.history-info__el-count x2
 													.history-info__el-price 680 ₸
+													.history-info__el-review Оставить отзыв
 										.history-info-footer
+											.history-info-get Повторить заказ
 											.history-info-total
 												.history-info-total__text Сумма:
 												.history-info-total__val 1 184 ₸
-											.history-info-get
-												+icon("refresh","icon")
-												span Повторить заказ
-							.history-more
-								+icon("refresh","icon")
-								span показать еще
+
 							.order-empty.hidden
 								.order-empty-icon
 									img(src="img/anxiety.svg", alt="")

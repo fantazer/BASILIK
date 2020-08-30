@@ -1,0 +1,39 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			+bread()
+			.title.title--lg Отзывы
+			.review
+				.review-wrap
+					- for (var j=0;j<5;j++)
+						.review__el
+							.review__el-info
+								.review__el-name Марина
+								.review-star
+									- for (var i=0;i<4;i++)
+										+icon("star","icon")
+							.review__el-date 15 марта 2019 13:04
+							.review__el-text.text
+								p Мне подача блюда понравилась - смотрится красиво, есть защитная пленка, блюдо свежее. Красиво оформлено, разнообразный состав. Смутил только майонез, но в принципе, ничего страшного.
+							.answer
+								.answer-head__icon
+									img(src="img/logo-line--simple.svg", alt="")
+								.answer-text.text
+									p Благодарим за приятные слова! Довольные покупатели - наша лучшая награда.
+					.btn-row-mid
+						.btn--md.btn--light Показать еще
+				.review-msg
+					.msg.stick
+						.msg__icon
+							img(src="img/book.svg", alt="")
+						.msg__title Напишите отзыв
+						.msg__text Помогите сделать наш сервис еще лучше! =)
+						.msg__get.btn--md.btn--mark.btn--full Написать отзыв
+
+
+	+footer()
+include ./block_html/_script.pug

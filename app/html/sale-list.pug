@@ -1,0 +1,29 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.main-cont
+				.title-row
+					.arrow(onclick="window.history.go(-1); return false;")
+						+icon("arrow-conner-left","icon")
+					.title.title--lg Акции и новости
+					.size
+						.size__el.size__el--active Все
+						.size__el Акции
+						.size__el Новости
+				.sale-list--lg
+					- for (var j=0;j<2;j++)
+						- for (var i=0;i<4;i++)
+							a(href="#").sale-el
+								.sale-el__img(style="background-image:url('img/sale-" + (i + 1) + ".jpg')")
+								.sale-el__title Съешь плов и выиграй 50 000 тенге!
+								.sale-el__text Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..
+								.sale-el__date
+									+icon("clock","icon icon--sm icon--right icon--gray")
+									span Акция действует до 21 августа 2020 г
+
+	+footer()
+include ./block_html/_script.pug

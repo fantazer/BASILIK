@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="noty-wrap">
+            <div class="main-cont">
+                <div class="noty">
+                    <div class="noty__text">Установи мобильное приложение Basilic и заказывай без очереди, получай и оплачивай бонусами!</div>
+                    <a class="noty__get btn--sm btn--white" href="#">Скачать</a>
+                    <div class="noty__close js-noty__close">
+                        <svg class="icon">
+                            <use xlink:href="#close-box"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap">
+            <div class="header-menu js-slide-block-toggle" data-menu="menu">
+                <div class="header-menu-btn">
+                    <svg class="icon is-close">
+                        <use xlink:href="#food"></use>
+                    </svg>
+                    <svg class="icon is-open">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                    <span>Меню</span>
+                </div>
+            </div>
+            <a class="header-logo" href="/">
+                <img class="header-logo--desc" src="img/logo.svg" alt="" />
+                <img class="header-logo--mobile" src="img/logo-light.svg" alt="" />
+            </a>
+            <div class="header-cont">
+                <!-- top header-->
+                <div class="header-top">
+                    <div class="header-location">
+                        <svg class="icon icon--md icon--mark icon--right">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Нур-Султан</span>
+                        <div class="bubble-loc hidden">
+                            <!-- NOTE!!! REMOVE Class .hidden-->
+                            <div class="bubble-loc__title">Ваш город
+                                <span class="type--red type--bold">Нур-султан ?</span>
+                            </div>
+                            <div class="bubble-loc__footer">
+                                <div class="bubble-loc__footer--true">Да</div>
+                                <div class="bubble-loc__footer--false">Нет, выбрать другой</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-work__time">работаем с 9 до 23</div>
+                    <div class="nav-top">
+                        <a class="nav-top__el" href="#">Акции и новости</a>
+                        <a class="nav-top__el" href="#">Доставка и оплата</a>
+                        <a class="nav-top__el" href="#">Отзывы</a>
+                        <a class="nav-top__el" href="#">Рестораны</a>
+                        <a class="nav-top__el" href="#">Вакансии</a>
+                        <a class="nav-top__el" href="#">Наши гости</a>
+                        <a class="nav-top__el" href="#">О нас</a>
+                    </div>
+                    <div class="auth icon-row">
+                        <!--toggle class .auth + .active to auth-img show-->
+                        <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                        <svg class="icon icon--md icon--gray icon--right">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Профиль</span>
+                    </div>
+                    <div class="lang">
+                        <a class="lang__el lang__el--active" href="#">Каз</a>
+                        <a class="lang__el" href="#">Eng</a>
+                        <a class="lang__el" href="#">Рус</a>
+                    </div>
+                </div>
+                <!-- top header === end-->
+                <!-- header-main-->
+                <div class="header-main">
+                    <div class="header-nav">
+                        <a class="header-nav__el" href="#">Блюда на компанию</a>
+                        <a class="header-nav__el" href="#">Завтраки</a>
+                        <a class="header-nav__el" href="#">Закуски</a>
+                        <a class="header-nav__el" href="#">Салаты</a>
+                        <a class="header-nav__el" href="#">Супы</a>
+                        <a class="header-nav__el" href="#">Горячие блюда</a>
+                        <a class="header-nav__el" href="#">Шашлыки и гриль</a>
+                        <a class="header-nav__el--mobile header-nav__el" href="#">Гарниры</a>
+                        <a class="header-nav__el--mobile header-nav__el" href="#">Соусы</a>
+                        <div class="header-nav__more">
+                            <span>Eще</span>
+                            <div class="header-nav-sub">
+                                <a class="header-nav-sub__el--mobile" href="#">Гарниры</a>
+                                <a class="header-nav-sub__el--mobile" href="#">Соусы</a>
+                                <a class="header-nav-sub__el" href="#">Десерты</a>
+                                <a class="header-nav-sub__el" href="#">Напитки</a>
+                                <a class="header-nav-sub__el" href="#">Дополнительно</a>
+                                <a class="header-nav-sub__el" href="#">Замороженная продукция</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="search-wrap">
+                            <input class="input" type="text" placeholder="Поиск среди 365 блюд" />
+                        </div>
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <a class="header-cart" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        <div class="header-cart__cost">1249 р</div>
+                        <div class="header-cart__size">5</div>
+                        <div class="cart-bubble-wrap hidden">
+                            <!-- NOTE!!! REMOVE Class .hidden-->
+                            <div class="cart-bubble">
+                                <svg class="icon">
+                                    <use xlink:href="#free"></use>
+                                </svg>
+                                <span>Для бесплатной доставки осталось добавить товаров еще на 456 тенге</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                        <svg class="icon is-close">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <!-- header-main === end-->
+            </div>
+        </div>
+        <!--slide block cart-->
+        <div class="slide-block slide-block--left slide-block--menu" data-menu="menu">
+            <div class="slide-block-wrap scroll">
+                <div class="slide-menu__list">
+                    <a class="header-nav__el header-nav__el--light" href="#">Блюда на компанию</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Завтраки</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Закуски</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Салаты</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Супы</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Горячие блюда</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Шашлыки и гриль</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Гарниры</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Соусы</a>
+                </div>
+            </div>
+        </div>
+        <!--slide block nav-->
+        <div class="slide-block slide-block--right slide-block--menu" data-menu="nav">
+            <div class="slide-block-wrap scroll">
+                <div class="header-contact">
+                    <svg class="icon">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    <div class="header-contact__info">
+                        <a class="header-contact__loc" href="tel:8 495 123 45 67">Нур-Султан</a>
+                        <div class="header-contact__time">заказывайте с 10 до 20</div>
+                    </div>
+                </div>
+                <div class="auth icon-row">
+                    <!--toggle class .auth + .active to auth-img show-->
+                    <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                    <svg class="icon icon--md icon--gray icon--right">
+                        <use xlink:href="#user"></use>
+                    </svg>
+                    <span>Профиль</span>
+                </div>
+                <div class="slide-menu-nav">
+                    <a class="slide-menu-nav__el" href="#">Акции и новости</a>
+                    <a class="slide-menu-nav__el" href="#">Доставка и оплата</a>
+                    <a class="slide-menu-nav__el" href="#">Отзывы</a>
+                    <a class="slide-menu-nav__el" href="#">Рестораны</a>
+                    <a class="slide-menu-nav__el" href="#">Вакансии</a>
+                    <a class="slide-menu-nav__el" href="#">Наши гости</a>
+                    <a class="slide-menu-nav__el" href="#">О нас</a>
+                    <a class="slide-menu-nav__el slide-menu-nav__el--light" href="#">Публичная оферта</a>
+                    <a class="slide-menu-nav__el slide-menu-nav__el--light" href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="size">
+                    <div class="size__el size__el--active">Каз</div>
+                    <div class="size__el">Eng</div>
+                    <div class="size__el">Рус</div>
+                </div>
+                <div class="soc-row">
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-facebook"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-instagram"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el soc-row__el--red" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-telegram"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- main-header === end-->
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="main-cont">
+                <div class="order">
+                    <div class="order-form">
+                        <div class="title title--lg">Оформление заказа</div>
+                        <div class="form-block">
+                            <div class="title title--md">Личные данные</div>
+                            <div class="input-cont input-cont--two">
+                                <div class="input-row input-row--error">
+                                    <input class="input" type="text" placeholder="Ваше имя" />
+                                    <div class="error-msg">Ошибка в данных</div>
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Номер телефона" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-block">
+                            <!--choose type deliver-->
+                            <div class="title title--md">Доставка</div>
+                            <div class="input-cont input-cont--extend input-cont--two">
+                                <div class="input-row">
+                                    <div class="size size--lg size--mark">
+                                        <div class="size__el size__el--active js-switch" data-item="deliver" data-group="deliverType">Привезите</div>
+                                        <div class="size__el js-switch" data-item="self" data-group="deliverType">Заберу сам</div>
+                                    </div>
+                                </div>
+                                <div class="input-row input-row--middle">
+                                    <svg class="icon icon--sm icon--right icon--gray">
+                                        <use xlink:href="#clock"></use>
+                                    </svg>
+                                    <span class="type--sm">
+                                        <span class="type--gray">Приготовим за</span>20 минут</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--type deliver-->
+                        <div class="js-switch-cont" data-item="deliver" data-group="deliverType">
+                            <!-- если нет адреса в лк-->
+                            <div class="title">Адрес доставки</div>
+                            <div class="input-cont input-cont--two">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Название адреса (дом, работа)" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Улица" />
+                                </div>
+                            </div>
+                            <div class="input-cont input-cont--four">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Дом" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="№ кв, офис" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Подъезд" />
+                                </div>
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Этаж" />
+                                </div>
+                            </div>
+                            <div class="input-cont input-cont--four">
+                                <div class="input-row input-row--middle">
+                                    <div class="check-el">
+                                        <label class="style-label style-label--checkbox">
+                                            <input class="style-input" type="checkbox" />
+                                            <div class="style-input-element js-switch" data-item="intercom" data-group="admission">
+                                                <svg class="icon">
+                                                    <use xlink:href="#checked"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="style-input-text type--sm">Есть домофон</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-row js-switch-cont hidden" data-item="intercom" data-group="admission">
+                                    <input class="input" type="text" placeholder="Домофон" />
+                                </div>
+                            </div>
+                            <!-- если нет адреса в лк === end-->
+                            <!-- Выбор адреса из лк-->
+                            <div class="form-block">
+                                <div class="direction">
+                                    <div class="direction-el js-switch active" data-item="direction">
+                                        <div class="direction-el__title">Дом</div>
+                                        <div class="direction-el__text">г. Красноярск, ул. Великовосточная, д. 54а, корпус 2, кв. 54, 5 этаж, домофон 56</div>
+                                    </div>
+                                    <div class="direction-el js-switch" data-item="direction">
+                                        <div class="direction-el__title">Работа</div>
+                                        <div class="direction-el__text">ул. Московская, д. 35, офис 469</div>
+                                    </div>
+                                    <div class="direction-el-add">
+                                        <div class="icon-block icon-block--empty">
+                                            <svg class="icon">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                        <span>добавить адрес</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-switch-cont hidden" data-item="self" data-group="deliverType">
+                            <!-- Выбор адреса из лк-->
+                            <div class="form-block">
+                                <div class="direction direction--sm">
+                                    <div class="direction-el js-switch active" data-item="directionDeliver">
+                                        <div class="direction-el__title">ул. Ленина, д. 64</div>
+                                        <div class="direction-el__text">ежедневно с 10 до 22</div>
+                                    </div>
+                                    <div class="direction-el js-switch" data-item="directionDeliver">
+                                        <div class="direction-el__title">ул. Тимирязева, д. 81</div>
+                                        <div class="direction-el__text">ежедневно с 10 до 22</div>
+                                    </div>
+                                    <div class="direction-el js-switch" data-item="directionDeliver">
+                                        <div class="direction-el__title">ул. Пушкина, корп. 2</div>
+                                        <div class="direction-el__text">ежедневно с 9 до 21</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Выбор адреса из лк === end-->
+                        </div>
+                        <!-- Выбор адреса из лк === end-->
+                        <div class="form-block">
+                            <div class="title title--md">Время</div>
+                            <div class="input-cont input-cont--two">
+                                <div class="input-row">
+                                    <div class="size size--fluid size--column size--mark">
+                                        <div class="size__el size__el--active js-switch" data-group="deliverTime">Как можно раньше</div>
+                                        <div class="size__el js-switch" data-item="toTime" data-group="deliverTime">Ко времени</div>
+                                    </div>
+                                </div>
+                                <div class="input-row js-switch-cont hidden" data-item="toTime" data-group="deliverTime">
+                                    <div class="col-2">
+                                        <select class="select-beauty">
+                                            <option>Cегодня</option>
+                                            <option>Завтра</option>
+                                            <option>10.11</option>
+                                        </select>
+                                        <select class="select-beauty">
+                                            <option>12:00</option>
+                                            <option>13:00</option>
+                                            <option>14:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- choose payment type-->
+                        <div class="form-block">
+                            <div class="title title--md">Оплата</div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <div class="size size--fluid size--column size--mark">
+                                        <div class="size__el size__el--active js-switch" data-group="typePay">Картой онлайн</div>
+                                        <div class="size__el js-switch" data-item="cash" data-group="typePay">Наличными при получении</div>
+                                        <div class="size__el js-switch" data-group="typePay">Картой при получеии</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-switch-cont hidden" data-item="cash" data-group="typePay">
+                                <div class="title">Нужна сдача?</div>
+                                <div class="input-cont input-cont--four">
+                                    <div class="input-row">
+                                        <input class="input" type="text" placeholder="Сдача с" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- bonus-->
+                        <div class="range__wrap">
+                            <div class="range-head">
+                                <div class="range-title">Сколько бонусных баллов спишем?</div>
+                                <div class="range-head__info">
+                                    <div class="range-head__text">баланс</div>
+                                    <div class="range-head__val">2500</div>
+                                    <svg class="icon">
+                                        <use xlink:href="#info"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <input class="range" type="range" value="100" data-min="0" data-max="200" />
+                        </div>
+                        <!-- choose payment type === end-->
+                        <div class="form-block">
+                            <div class="title title--md">Комментарий к заказу</div>
+                            <div class="input-cont">
+                                <textarea class="input" name="text" cols="30" rows="10" placeholder="Если у вас есть какие-то пожелания к заказу, опишите их здесь"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-condition">
+                        <div class="steps">
+                            <a class="step__el step__el--active" href="#">
+                                <div class="step__el-val">1</div>
+                                <div class="step__el-name">Корзина</div>
+                            </a>
+                            <div class="step-line"></div>
+                            <a class="step__el step__el--active" href="#">
+                                <div class="step__el-val">2</div>
+                                <div class="step__el-name">Оформление заказа</div>
+                            </a>
+                            <div class="step-line"></div>
+                            <a class="step__el" href="#">
+                                <div class="step__el-val">3</div>
+                                <div class="step__el-name">Заказ принят</div>
+                            </a>
+                        </div>
+                        <div class="title title--md">Мой заказ</div>
+                        <div class="input-row">
+                            <div class="input-get">
+                                <input class="input" type="text" placeholder="Ввести промокод" />
+                                <div class="input-get__btn">Принять</div>
+                            </div>
+                        </div>
+                        <div class="goods-list">
+                            <div class="goods-list__el">
+                                <div class="goods-list__el-name">Салями</div>
+                                <div class="goods-list__el-val">x 2</div>
+                                <div class="goods-list__el-cost">1003 р.</div>
+                            </div>
+                            <div class="goods-list__el">
+                                <div class="goods-list__el-name">Приборы</div>
+                                <div class="goods-list__el-val">x 2</div>
+                                <div class="goods-list__el-cost">1003 р.</div>
+                            </div>
+                            <div class="goods-list__el">
+                                <div class="goods-list__el-name">Доставка</div>
+                                <div class="goods-list__el-val"></div>
+                                <div class="goods-list__el-cost">200 р.</div>
+                            </div>
+                        </div>
+                        <div class="order-total">
+                            <div class="order-total__text">Итого:</div>
+                            <div class="order-total__val">14 710 ₸</div>
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Я согласен с
+                                        <a href="#">условиями обработки</a>персональных данных</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="login-remember">
+                            <div class="check-el">
+                                <label class="style-label style-label--checkbox">
+                                    <input class="style-input" type="checkbox" />
+                                    <div class="style-input-element">
+                                        <svg class="icon">
+                                            <use xlink:href="#checked"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="style-input-text">Не перезванивать мне</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="btn--md btn--full btn--mark btn--disable">Оформить заказ
+                            <!--remove .btn--disable-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="footer">
+            <div class="footer-nav">
+                <a class="footer-nav__el" href="#">Акции и новости</a>
+                <a class="footer-nav__el" href="#">Доставка и оплата</a>
+                <a class="footer-nav__el" href="#">Отзывы</a>
+                <a class="footer-nav__el" href="#">Рестораны</a>
+                <a class="footer-nav__el" href="#">Вакансии</a>
+                <a class="footer-nav__el" href="#">Наши гости</a>
+                <a class="footer-nav__el" href="#">О нас</a>
+                <a class="footer-nav__el" href="#">Публичная оферта</a>
+                <a class="footer-nav__el" href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="soc-row">
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-facebook"></use>
+                    </svg>
+                </a>
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-instagram"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-payment">
+                <img src="img/payment.svg" alt="" />
+            </div>
+            <a class="create" href="#">
+                <span>Создано в:</span>
+                <img src="img/jq.svg" alt="" />
+            </a>
+        </div>
+        <!--block footer end-->
+    </div>
+    <script src="./js/combined.js"></script>
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>

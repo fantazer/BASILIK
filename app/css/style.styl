@@ -1390,7 +1390,10 @@ body
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(4, 1fr)
-	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+.sale-list--lg
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(3, 1fr)
 .sale-el
 	padding: 20px
 	br(20px)
@@ -1727,7 +1730,7 @@ body
 .msg
 	background: #f5f5f5
 	br(20px)
-	padding: 50px 70px
+	padding: 50px
 	flex(mid)
 	fl()
 
@@ -1737,6 +1740,7 @@ body
 	@extend .type--md
 	font-weight 700
 	margin-bottom: 10px
+	text-align center
 .msg__text
 	text-align center
 	line-height: 1.4
@@ -2113,7 +2117,7 @@ body
 	align-items center
 	margin-bottom: 30px
 	span
-		color $brown
+		color $mark
 	.icon-block
 		margin-right: 20px
 
@@ -2413,6 +2417,7 @@ select.select-beauty
 		fw()
 	f()
 	justify-content space-between
+	margin-top: 100px
 .lk-toolbar
 	+below(1024px)
 		margin-bottom: 20px
@@ -2435,7 +2440,7 @@ select.select-beauty
 	f()
 	fl()
 	br(10px)
-	margin-bottom: 20px
+	margin-bottom: 30px
 	background: white
 	padding-bottom: 40px
 .profile-wrap
@@ -2485,7 +2490,7 @@ select.select-beauty
 	height: 100%
 
 .profile__name
-	@extend .type--lg
+	@extend .type--md
 	font-weight 700
 	line-height: 1.4
 	margin-bottom: 20px
@@ -2495,19 +2500,19 @@ select.select-beauty
 .profile-row__name
 	color $gray
 	margin-bottom: 5px
-.profile-row__val
-	@extend .type--md
+	font-size: 14px
 .profile-change
 	f()
 	align-items center
 	width: 100%
 	margin-top: 20px
+	font-size: 14px
 	.icon
 		size 20px
 		margin-right: 10px
 		fill $mark
 	span
-		color $brown
+		color $mark
 .profile-footer
 	f()
 	padding-top:30px
@@ -2516,17 +2521,18 @@ select.select-beauty
 	justify-content space-between
 	width: 100%
 .profile-footer-info
-	margin-right auto
-	f()
-	align-items center
+	flex(between)
+	width: 100%
 .profile-footer__text
 	margin-right: 10px
+	font-size: 14px
 .profile-footer__val
 	font-weight: 700
 	line-height: 1
 	@extend .type--lg
 	color $red
 .profile-footer__icon
+	flex(mid)
 	.icon
 		fill $mark
 		size 20px
@@ -2540,8 +2546,7 @@ select.select-beauty
 	.icon-block
 		margin-right: 10px
 	span
-		color $brown
-		@extend .type--md
+		color $mark
 
 .lk-info__el
 	margin-bottom: 20px
@@ -2555,14 +2560,15 @@ select.select-beauty
 	padding: 60px 0
 .order-empty-icon
 	img
-		size 180px
-		margin-bottom: 10px
+		size 140px
+		margin-bottom: 30px
 .order-empty-title
-	@extend .type--xl
-	font-weight 600
+	@extend .type--md
+	font-weight 700
 	margin-bottom: 10px
 .order-empty-text
 	margin-bottom: 20px
+	color $gray
 .order-empty--hide
 	display: none
 
@@ -2576,7 +2582,7 @@ select.select-beauty
 		margin-right: 10px
 		fill $mark
 	span
-		color $brown
+		color $mark
 
 .address-wrap
 	+below(640px)
@@ -2586,12 +2592,16 @@ select.select-beauty
 	grid-template-columns: repeat(2, 1fr)
 	margin-bottom: 50px
 .address__el
-	padding: 25px
-	border-radius 10px
-	background-color #ffffff
 	f()
 	fl()
 	cp()
+	tr()
+	padding: 25px
+	border-radius 10px
+	background-color #ffffff
+	border 1px solid transparent
+	&:hover
+		border 1px solid $mark
 .address__el.state--active
 	border-radius 10px
 	color white
@@ -2610,6 +2620,7 @@ select.select-beauty
 .address__val
 	line-height: 1.8
 	margin-bottom: 20px
+	font-size: 14px
 .address-footer
 	+below(480px)
 		fw()
@@ -2619,6 +2630,7 @@ select.select-beauty
 	flex(mid)
 	cp()
 	line-height: 1
+	font-size: 14px
 	&:hover
 		span
 			color black
@@ -2726,8 +2738,8 @@ select.select-beauty
 	+below(480px)
 		grid-template-columns repeat(auto-fit, minmax(35px, 35px));
 	display: grid
-	grid-gap 15px
-	grid-template-columns repeat(4,1fr);
+	grid-gap 20px
+	grid-template-columns repeat(5,1fr);
 .history-card__list-el
 	+below(480px)
 		size 35px
@@ -2750,6 +2762,7 @@ select.select-beauty
 
 .history-card__list-el--last
 	.history-card__list-el-val
+		br(4px)
 		width: 100%
 		height: 100%
 		left 0
@@ -2796,7 +2809,7 @@ select.select-beauty
 .history-info__list
 	+below(640px)
 		margin-bottom: 20px
-	margin-bottom: 25px
+	margin-bottom: 10px
 .history-info__el
 	+below(640px)
 		fw()
@@ -2808,25 +2821,26 @@ select.select-beauty
 	f()
 	align-items: center
 	margin-bottom: 10px
-	padding-bottom: 20px
-	border-bottom 1px solid $gray--light
+	padding-bottom: 10px
+	border-bottom 1px solid #f5f5f5
 .history-info__el-img
 	+below(480px)
 		size 55px
 	size 40px
-	round()
+	br(5px)
 	bg-full()
-	border 1px solid #cbbaac
+	border 1px solid #f5f5f5
 	position: relative
 	margin-right: 20px
 .history-info__el-about
 	+below(640px)
 		width: 70%
-	width: 50%
+	width: 45%
 .history-info__el-title
+	font-size: 14px
 	margin-bottom: 5px
 .history-info__el-text
-	opacity .6
+	color $gray
 	@extend .type--sm
 .history-info__el-count
 	+below(640px)
@@ -2843,21 +2857,28 @@ select.select-beauty
 	border 1px solid $snow
 	flex(mid)
 	margin-left: auto
-	margin-right: 10%
+	margin-right: 5%
+	font-size: 14px
 .history-info__el-price
 	+below(640px)
 		margin-top: 10px
 	flex(mid)
-	font-weight:600
+	font-weight 700
 
+.history-info__el-review
+	color $gray
+	margin-left: 20px
+	font-size: 14px
+	cp()
+	tr()
+	&:hover
+		color black
 .history-info-footer
 	+below(640px)
 		fw()
 		justify-content: space-between
 	f()
 	padding-top: 20px
-	margin-top: 20px
-	border-top 1px solid $border-color
 	align-items: center
 .history-info-total
 	+below(640px)
@@ -2875,23 +2896,14 @@ select.select-beauty
 	font-weight: 700
 	font-size: 24px
 .history-info-get
-	+below(640px)
-		width: 100%
-		margin: 20px 0
-	margin-left: auto
-	padding: 10px 20px
-	flex(mid)
-	cp()
-	&:hover
-		.icon
-			transform rotate(360deg)
-	.icon
-		transition all .8s
-		size 22px
-		margin-right: 10px
-		fill $mark
+	@extend .btn--sm
+	@extend .btn--mark
+	margin-right auto
 // history === end
 // LK HISTORY === end
 
-.content--gray
-	background: #f5f5f5
+.page--gray
+	.content
+		background: #f5f5f5
+	.footer
+		background: white

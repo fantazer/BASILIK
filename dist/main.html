@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="noty-wrap">
+            <div class="main-cont">
+                <div class="noty">
+                    <div class="noty__text">Установи мобильное приложение Basilic и заказывай без очереди, получай и оплачивай бонусами!</div>
+                    <a class="noty__get btn--sm btn--white" href="#">Скачать</a>
+                    <div class="noty__close js-noty__close">
+                        <svg class="icon">
+                            <use xlink:href="#close-box"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap">
+            <div class="header-menu js-slide-block-toggle" data-menu="menu">
+                <div class="header-menu-btn">
+                    <svg class="icon is-close">
+                        <use xlink:href="#food"></use>
+                    </svg>
+                    <svg class="icon is-open">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                    <span>Меню</span>
+                </div>
+            </div>
+            <a class="header-logo" href="/">
+                <img class="header-logo--desc" src="img/logo.svg" alt="" />
+                <img class="header-logo--mobile" src="img/logo-light.svg" alt="" />
+            </a>
+            <div class="header-cont">
+                <!-- top header-->
+                <div class="header-top">
+                    <div class="header-location">
+                        <svg class="icon icon--md icon--mark icon--right">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        <span>Нур-Султан</span>
+                        <div class="bubble-loc hidden">
+                            <!-- NOTE!!! REMOVE Class .hidden-->
+                            <div class="bubble-loc__title">Ваш город
+                                <span class="type--red type--bold">Нур-султан ?</span>
+                            </div>
+                            <div class="bubble-loc__footer">
+                                <div class="bubble-loc__footer--true">Да</div>
+                                <div class="bubble-loc__footer--false">Нет, выбрать другой</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-work__time">работаем с 9 до 23</div>
+                    <div class="nav-top">
+                        <a class="nav-top__el" href="#">Акции и новости</a>
+                        <a class="nav-top__el" href="#">Доставка и оплата</a>
+                        <a class="nav-top__el" href="#">Отзывы</a>
+                        <a class="nav-top__el" href="#">Рестораны</a>
+                        <a class="nav-top__el" href="#">Вакансии</a>
+                        <a class="nav-top__el" href="#">Наши гости</a>
+                        <a class="nav-top__el" href="#">О нас</a>
+                    </div>
+                    <div class="auth icon-row">
+                        <!--toggle class .auth + .active to auth-img show-->
+                        <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                        <svg class="icon icon--md icon--gray icon--right">
+                            <use xlink:href="#user"></use>
+                        </svg>
+                        <span>Профиль</span>
+                    </div>
+                    <div class="lang">
+                        <a class="lang__el lang__el--active" href="#">Каз</a>
+                        <a class="lang__el" href="#">Eng</a>
+                        <a class="lang__el" href="#">Рус</a>
+                    </div>
+                </div>
+                <!-- top header === end-->
+                <!-- header-main-->
+                <div class="header-main">
+                    <div class="header-nav">
+                        <a class="header-nav__el" href="#">Блюда на компанию</a>
+                        <a class="header-nav__el" href="#">Завтраки</a>
+                        <a class="header-nav__el" href="#">Закуски</a>
+                        <a class="header-nav__el" href="#">Салаты</a>
+                        <a class="header-nav__el" href="#">Супы</a>
+                        <a class="header-nav__el" href="#">Горячие блюда</a>
+                        <a class="header-nav__el" href="#">Шашлыки и гриль</a>
+                        <a class="header-nav__el--mobile header-nav__el" href="#">Гарниры</a>
+                        <a class="header-nav__el--mobile header-nav__el" href="#">Соусы</a>
+                        <div class="header-nav__more">
+                            <span>Eще</span>
+                            <div class="header-nav-sub">
+                                <a class="header-nav-sub__el--mobile" href="#">Гарниры</a>
+                                <a class="header-nav-sub__el--mobile" href="#">Соусы</a>
+                                <a class="header-nav-sub__el" href="#">Десерты</a>
+                                <a class="header-nav-sub__el" href="#">Напитки</a>
+                                <a class="header-nav-sub__el" href="#">Дополнительно</a>
+                                <a class="header-nav-sub__el" href="#">Замороженная продукция</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="search-wrap">
+                            <input class="input" type="text" placeholder="Поиск среди 365 блюд" />
+                        </div>
+                        <svg class="icon">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </div>
+                    <a class="header-cart" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        <div class="header-cart__cost">1249 р</div>
+                        <div class="header-cart__size">5</div>
+                        <div class="cart-bubble-wrap hidden">
+                            <!-- NOTE!!! REMOVE Class .hidden-->
+                            <div class="cart-bubble">
+                                <svg class="icon">
+                                    <use xlink:href="#free"></use>
+                                </svg>
+                                <span>Для бесплатной доставки осталось добавить товаров еще на 456 тенге</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="header-nav-toggle js-slide-block-toggle" data-menu="nav">
+                        <svg class="icon is-close">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                        <svg class="icon is-open">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <!-- header-main === end-->
+            </div>
+        </div>
+        <!--slide block cart-->
+        <div class="slide-block slide-block--left slide-block--menu" data-menu="menu">
+            <div class="slide-block-wrap scroll">
+                <div class="slide-menu__list">
+                    <a class="header-nav__el header-nav__el--light" href="#">Блюда на компанию</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Завтраки</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Закуски</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Салаты</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Супы</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Горячие блюда</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Шашлыки и гриль</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Гарниры</a>
+                    <a class="header-nav__el header-nav__el--light" href="#">Соусы</a>
+                </div>
+            </div>
+        </div>
+        <!--slide block nav-->
+        <div class="slide-block slide-block--right slide-block--menu" data-menu="nav">
+            <div class="slide-block-wrap scroll">
+                <div class="header-contact">
+                    <svg class="icon">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    <div class="header-contact__info">
+                        <a class="header-contact__loc" href="tel:8 495 123 45 67">Нур-Султан</a>
+                        <div class="header-contact__time">заказывайте с 10 до 20</div>
+                    </div>
+                </div>
+                <div class="auth icon-row">
+                    <!--toggle class .auth + .active to auth-img show-->
+                    <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                    <svg class="icon icon--md icon--gray icon--right">
+                        <use xlink:href="#user"></use>
+                    </svg>
+                    <span>Профиль</span>
+                </div>
+                <div class="slide-menu-nav">
+                    <a class="slide-menu-nav__el" href="#">Акции и новости</a>
+                    <a class="slide-menu-nav__el" href="#">Доставка и оплата</a>
+                    <a class="slide-menu-nav__el" href="#">Отзывы</a>
+                    <a class="slide-menu-nav__el" href="#">Рестораны</a>
+                    <a class="slide-menu-nav__el" href="#">Вакансии</a>
+                    <a class="slide-menu-nav__el" href="#">Наши гости</a>
+                    <a class="slide-menu-nav__el" href="#">О нас</a>
+                    <a class="slide-menu-nav__el slide-menu-nav__el--light" href="#">Публичная оферта</a>
+                    <a class="slide-menu-nav__el slide-menu-nav__el--light" href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="size">
+                    <div class="size__el size__el--active">Каз</div>
+                    <div class="size__el">Eng</div>
+                    <div class="size__el">Рус</div>
+                </div>
+                <div class="soc-row">
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-facebook"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-instagram"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el soc-row__el--red" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-telegram"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- main-header === end-->
+        </div>
+        <!--block header end-->
+        <div class="slider-wrap slider-wrap--main slider-wrap--inarrow">
+            <div class="slider-control slider-control--left">
+                <svg class="icon">
+                    <use xlink:href="#arrow-left-fat"></use>
+                </svg>
+            </div>
+            <div class="slider-control slider-control--right">
+                <svg class="icon">
+                    <use xlink:href="#arrow-right-fat"></use>
+                </svg>
+            </div>
+            <div class="main-slider slider-item">
+                <div class="main-slider__el-wrap">
+                    <a class="main-slider__el main-slider__el--md" href="#" style="background-image:url('img/slide-1.jpg')"></a>
+                    <a class="main-slider__el main-slider__el--sm" href="#" style="background-image:url('img/slide-2.jpg')"></a>
+                </div>
+                <div class="main-slider__el-wrap">
+                    <a class="main-slider__el main-slider__el--md" href="#" style="background-image:url('img/slide-1.jpg')"></a>
+                    <a class="main-slider__el main-slider__el--sm" href="#" style="background-image:url('img/slide-2.jpg')"></a>
+                </div>
+                <div class="main-slider__el-wrap">
+                    <a class="main-slider__el main-slider__el--md" href="#" style="background-image:url('img/slide-1.jpg')"></a>
+                    <a class="main-slider__el main-slider__el--sm" href="#" style="background-image:url('img/slide-2.jpg')"></a>
+                </div>
+                <div class="main-slider__el-wrap">
+                    <a class="main-slider__el main-slider__el--md" href="#" style="background-image:url('img/slide-1.jpg')"></a>
+                    <a class="main-slider__el main-slider__el--sm" href="#" style="background-image:url('img/slide-2.jpg')"></a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="main-cont">
+                <div class="kind">
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-1.jpg')">
+                        <div class="kind__el-title">Блюда на компанию</div>
+                    </a>
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-2.jpg')">
+                        <div class="kind__el-title">Завтраки</div>
+                    </a>
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-3.jpg')">
+                        <div class="kind__el-title">Закуски</div>
+                    </a>
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-4.jpg')">
+                        <div class="kind__el-title">Салаты</div>
+                    </a>
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-5.jpg')">
+                        <div class="kind__el-title">Супы</div>
+                    </a>
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-6.jpg')">
+                        <div class="kind__el-title">Горячие блюда</div>
+                    </a>
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-7.jpg')">
+                        <div class="kind__el-title">Шашлыки и гриль</div>
+                    </a>
+                    <a class="kind__el" href="#" style="background-image:url('img/kind-8.jpg')">
+                        <div class="kind__el-title">Гарниры</div>
+                    </a>
+                </div>
+                <div class="kind-sm">
+                    <a class="kind__sm-el" href="#" style="background-image:url('img/btn-bg-1.jpg')">
+                        <span>Соусы</span>
+                    </a>
+                    <a class="kind__sm-el" href="#" style="background-image:url('img/btn-bg-2.jpg')">
+                        <span>Десерты</span>
+                    </a>
+                    <a class="kind__sm-el" href="#" style="background-image:url('img/btn-bg-3.jpg')">
+                        <span>Напитки</span>
+                    </a>
+                    <a class="kind__sm-el" href="#" style="background-image:url('img/btn-bg-4.jpg')">
+                        <span>Дополнительно</span>
+                    </a>
+                    <a class="kind__sm-el" href="#" style="background-image:url('img/btn-bg-5.jpg')">
+                        <span>Замороженная продукция</span>
+                    </a>
+                </div>
+                <!--NOTE !!! colors tags => Классика - #111415; Вок - #45010b; Шоколадно - #6d2200; Хит - #b40007; Остро - #ff3d00; Новинка - #fe54a1; По-новому - #ffc400; Полезно - #ff9900; Микс - #afcb08; Летний - #65be05; Basilic - #3ead48; Шалом - #006e35; После еды - #00b49b; Рыбно - #3070b9; Популярно - #4032a2; Домашние - #8e00c1;-->
+                <div class="section-title">Блюда на компанию</div>
+                <div class="product-cont">
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-1.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-1.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-1.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-1.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-1.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-1.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-1.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-title">Завтраки</div>
+                <div class="product-cont">
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-4.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-4.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-4.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-4.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-4.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-4.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-row-mid">
+                    <a class="product-more btn--sm btn--light btn--mobile" href="#">показать еще</a>
+                </div>
+            </div>
+            <div class="app-wrap">
+                <div class="main-cont">
+                    <div class="app">
+                        <div class="app-img">
+                            <img src="img/app-phone.png" alt="" />
+                        </div>
+                        <div class="app-cont">
+                            <div class="app-title">Скачайте приложение Basilic и получи
+                                <span class="type--mark">500 бонусов</span>после первого заказа уже сегодня</div>
+                            <div class="app-text">Станьте участником программы лояльности и получайте десятки бонусов ежедневно. Теперь любимые блюда всегда в вашем смартфоне.</div>
+                            <div class="app-row">
+                                <a class="app-row__el" href="#">
+                                    <img src="img/qr.png" alt="" />
+                                </a>
+                                <a class="app-row__el" href="#">
+                                    <img src="img/app-google.png" alt="" />
+                                </a>
+                                <a class="app-row__el" href="#">
+                                    <img src="img/app-apple.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="app-adv">
+                                <div class="app-adv__el">
+                                    <svg class="icon">
+                                        <use xlink:href="#pocket"></use>
+                                    </svg>
+                                    <span>Оплачивайте заказы бонусами со смартфона</span>
+                                </div>
+                                <div class="app-adv__el">
+                                    <svg class="icon">
+                                        <use xlink:href="#mail"></use>
+                                    </svg>
+                                    <span>Мгновенно узнавайте о новых блюдах, акциях и скидках</span>
+                                </div>
+                                <div class="app-adv__el">
+                                    <svg class="icon">
+                                        <use xlink:href="#key"></use>
+                                    </svg>
+                                    <span>Доступ к полной информации о продуктах</span>
+                                </div>
+                                <div class="app-adv__el">
+                                    <svg class="icon">
+                                        <use xlink:href="#like"></use>
+                                    </svg>
+                                    <span>Быстрый и удобный заказ в два клика</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="section-title">Завтраки</div>
+                <div class="product-cont">
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-3.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-3.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-3.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-3.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-3.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-el">
+                        <div class="product-el-wrap">
+                            <a class="product__img" href="#">
+                                <div class="product__img-el" style="background-image:url('img/item-3.jpg')"></div>
+                                <div class="product-el-tag-wrap">
+                                    <div class="product-el-tag-el" style="background:#b40007">Хит</div>
+                                </div>
+                                <div class="product-el--add">
+                                    <svg class="icon">
+                                        <use xlink:href="#cart-empty"></use>
+                                    </svg>
+                                    <div class="product-el--add-val">2</div>
+                                </div>
+                            </a>
+                            <div class="product__cont">
+                                <a class="product__title" href="#">Манты с рубленной бараниной</a>
+                                <div class="size">
+                                    <div class="size__el size__el--active">200 г</div>
+                                    <div class="size__el">400 г</div>
+                                    <div class="size__el">800 г</div>
+                                </div>
+                                <div class="product-footer">
+                                    <div class="product-price">935 ₸</div>
+                                    <div class="product-weight">230 г / 1 порция</div>
+                                    <div class="item-add">
+                                        <svg class="icon">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-box">
+                                <div class="product__text">Свежеиспечённый ржаной хлеб на молочной закваске с добавлением мёда</div>
+                                <div class="product-kkal">
+                                    <div class="product-kkal__title type--sm type--gray">Энергетическая ценность на 100 г:</div>
+                                    <div class="type--sm">456 ккал / 34 б / 65 ж / 46 у</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-row-mid">
+                    <a class="product-more btn--sm btn--light btn--mobile" href="#">Показать все 45 блюд</a>
+                </div>
+                <div class="section-title">Акции и новости</div>
+                <div class="sale-list">
+                    <a class="sale-el" href="#">
+                        <div class="sale-el__img" style="background-image:url('img/sale-1.jpg')"></div>
+                        <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
+                        <!--.sale-el__text Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..-->
+                        <!--.sale-el__date
+					+icon("clock","icon icon--sm icon--right icon--gray")
+					span Акция действует до 21 августа 2020 г
+					-->
+                    </a>
+                    <a class="sale-el" href="#">
+                        <div class="sale-el__img" style="background-image:url('img/sale-2.jpg')"></div>
+                        <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
+                        <!--.sale-el__text Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..-->
+                        <!--.sale-el__date
+					+icon("clock","icon icon--sm icon--right icon--gray")
+					span Акция действует до 21 августа 2020 г
+					-->
+                    </a>
+                    <a class="sale-el" href="#">
+                        <div class="sale-el__img" style="background-image:url('img/sale-3.jpg')"></div>
+                        <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
+                        <!--.sale-el__text Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..-->
+                        <!--.sale-el__date
+					+icon("clock","icon icon--sm icon--right icon--gray")
+					span Акция действует до 21 августа 2020 г
+					-->
+                    </a>
+                    <a class="sale-el" href="#">
+                        <div class="sale-el__img" style="background-image:url('img/sale-4.jpg')"></div>
+                        <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
+                        <!--.sale-el__text Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..-->
+                        <!--.sale-el__date
+					+icon("clock","icon icon--sm icon--right icon--gray")
+					span Акция действует до 21 августа 2020 г
+					-->
+                    </a>
+                </div>
+                <div class="btn-row-mid">
+                    <a class="product-more btn--sm btn--light btn--mobile" href="#">Показать все акции</a>
+                </div>
+                <!-- seo text-->
+                <div class="title title--md">Добро пожаловать на «Территорию вкусной еды Basilic»</div>
+                <div class="seo-text text">
+                    <p>Basilic – то место, где вкусно и правильно готовят из самых свежих продуктов. Качество еды в твоей тарелке – наш приоритет! Мы собрали лучшее из кухонь мира, чтобы познакомить тебя с традициями питания разных стран. У нас ты найдешь
+                        и плов, и лазанью, и окрошку, и баурсаки. Никаких искусственных красителей, добавок, ГМО и прочих вредностей! Только натуральные продукты, проверенные поставщики, профессиональный подход и чистые руки в одноразовых перчатках!</p>
+                    <p>Приходи сам и большой компанией. Basilic может принять одновременно 416 гостей. У нас приятная атмосфера и современный дизайнерский интерьер. Ты не потратишь много денег, пообедав у нас. Нам не просто это дается, но мы держим отличные
+                        цены.</p>
+                </div>
+                <div class="seo-text--add text js-commutator-cont drop" data-item="seo">
+                    <p>Приходи сам и большой компанией. Basilic может принять одновременно 416 гостей. У нас приятная атмосфера и современный дизайнерский интерьер. Ты не потратишь много денег, пообедав у нас. Нам не просто это дается, но мы держим отличные
+                        цены.</p>
+                    <p>Basilic – то место, где вкусно и правильно готовят из самых свежих продуктов. Качество еды в твоей тарелке – наш приоритет! Мы собрали лучшее из кухонь мира, чтобы познакомить тебя с традициями питания разных стран. У нас ты найдешь
+                        и плов, и лазанью, и окрошку, и баурсаки. Никаких искусственных красителей, добавок, ГМО и прочих вредностей! Только натуральные продукты, проверенные поставщики, профессиональный подход и чистые руки в одноразовых перчатках!</p>
+                </div>
+                <div class="icon-row toggle-seo js-commutator-el" data-item="seo">
+                    <span class="type--mark type--false">Показать еще</span>
+                    <span class="type--red type--true">Скрыть</span>
+                    <svg class="icon icon--sm icon--gray icon--left">
+                        <use xlink:href="#arrow-down"></use>
+                    </svg>
+                </div>
+            </div>
+            <!-- seo text === end-->
+        </div>
+        <!--block footer-->
+        <div class="footer">
+            <div class="footer-nav">
+                <a class="footer-nav__el" href="#">Акции и новости</a>
+                <a class="footer-nav__el" href="#">Доставка и оплата</a>
+                <a class="footer-nav__el" href="#">Отзывы</a>
+                <a class="footer-nav__el" href="#">Рестораны</a>
+                <a class="footer-nav__el" href="#">Вакансии</a>
+                <a class="footer-nav__el" href="#">Наши гости</a>
+                <a class="footer-nav__el" href="#">О нас</a>
+                <a class="footer-nav__el" href="#">Публичная оферта</a>
+                <a class="footer-nav__el" href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="soc-row">
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-facebook"></use>
+                    </svg>
+                </a>
+                <a class="soc-row__el" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#soc-instagram"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer-payment">
+                <img src="img/payment.svg" alt="" />
+            </div>
+            <a class="create" href="#">
+                <span>Создано в:</span>
+                <img src="img/jq.svg" alt="" />
+            </a>
+        </div>
+        <!--block footer end-->
+    </div>
+    <script src="./js/combined.js"></script>
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>
