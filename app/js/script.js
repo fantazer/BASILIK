@@ -345,6 +345,17 @@ $(document).ready(function () {
  	})
 	//range slider === end
 
+		//history accord
+	$('.history-card__wrap').click(function () {
+		var current = $(this).closest('.history-card');
+		current.addClass("history-card--active");
+		current.find('.history-card__wrap').slideUp(600);
+		//current.find('.history-card__wrap').addClass('history-card__wrap--active');
+		current.find('.history-info').slideToggle(600);
+	});
+	//history accord===end
+
+
 	//window.condition = {};
 	//window.condition.info = info;
 });

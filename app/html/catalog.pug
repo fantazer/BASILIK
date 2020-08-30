@@ -32,7 +32,7 @@ include block_html/_include.pug
 			.cat-link
 				.cat-link-title Перейти в раздел
 				each item,i in headerNav
-					a(href="#").cat-link__el(class=i===4?'cat-link__el--active':'') #{item}
+					a(href="#" class=i===4?'cat-link__el--active':'').cat-link__el #{item}
 
 			// Toggle class  .disable for animation visible
 			.buble-order.disable
