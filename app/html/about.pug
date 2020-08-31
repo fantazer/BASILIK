@@ -1,0 +1,59 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+
+.page
+	+header()
+	.content
+		.main-cont
+			.info-banner(style="background-image:url('img/about.jpg')")
+			.about-cont
+				.title-row
+					.arrow(onclick="window.history.go(-1); return false;")
+						+icon("arrow-conner-left","icon")
+					.title.title--lg О нашей компании
+				.info-descr.text
+					p Мы очень тебе рады! Ты на территории вкусной еды, а это значит – пора подкрепиться!
+
+					p Basilic – то место, где вкусно и правильно готовят из самых свежих продуктов. Качество еды в твоей тарелке – наш приоритет! Мы собрали лучшее из кухонь мира, чтобы познакомить тебя с традициями питания разных стран. У нас ты найдешь и плов, и лазанью, и окрошку, и баурсаки. Никаких искусственных красителей, добавок, ГМО и прочих вредностей! Только натуральные продукты, проверенные поставщики, профессиональный подход и чистые руки в одноразовых перчатках!
+
+					p Мы ждем тебя всегда, а в нашем понимании – это круглосуточно!
+
+					p Приходи сам и большой компанией. Basilic может принять одновременно 416 гостей. У нас приятная атмосфера и современный дизайнерский интерьер. Ты не потратишь много денег, пообедав у нас. Нам не просто это дается, но мы держим отличные цены.
+
+					p Ну, и напоследок, откроем секрет современных алматинских хозяек: когда ждешь гостей и нужно блеснуть пловом или мантами, достаточно заехать в Basilic. То-то гости удивятся!
+
+					p Да, и доставка тоже есть! Ждееем!
+
+			.title.title--lg Наша команда
+			.slider-wrap.slider-wrap--simple
+				.slider-control.slider-control--left
+					+icon("arrow-left-fat","icon")
+				.slider-control.slider-control--right
+					+icon("arrow-right-fat","icon")
+				.staff-slider.slider-item
+					- for (var i=0;i<8;i++)
+						.staff
+							.staff-img(style="background-image:url('img/staf-1.jpg')")
+							.staff-name Григорий Мян
+							.staff-position Шеф Повар
+
+			.title.title--lg Наш инстаграм
+			.slider-wrap.slider-wrap--simple
+				.slider-control.slider-control--left
+					+icon("arrow-left-fat","icon")
+				.slider-control.slider-control--right
+					+icon("arrow-right-fat","icon")
+				.inst-slider.slider-item
+					- for (var i=0;i<8;i++)
+						.inst-img(style="background-image:url('img/inst-1.jpg')")
+
+			.title.title--md Юридическое лицо
+			.finance
+				.finance__col.text.type--gray
+					p Полное юридическое наименование <br> 		БИН для АО, ТОО и пр. / ИИН для ИП <br> Юридический адрес <br> Расчетный счёт (ИИК) <br> Наименование банка <br> БИК банка
+				.finance__col.text
+					p ТОО ” Food Studio“ <br> 	180540004253 <br> 	г. Нур-Султан, ул. Косшыгулулы, 24  нп.1 <br> KZ08826Z0KZTD2999853 <br> Филиал АО «АТФ Банк» в г. Астана <br> ALMNKZKA
+
+	+footer()
+include ./block_html/_script.pug

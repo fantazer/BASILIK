@@ -2,36 +2,355 @@ mixin modal()
 	.modal-layer
 		.modal-filter
 		.modal-wrap
-			.modal(data-modal="order")
+			// phone enter
+			.modal(data-modal="enter")
 				.modal-content
 					.modal-close
 						+icon("close","icon")
-					.modal-title Оставьте заявку
-					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
-					form.validate-form( action="javascript:void(null);")
-						.input-cont
+					.modal-title Вход на сайт
+					.modal-text Введите свой номер и код подтверждения будет отправлен по СМС в течение #[span.type--red 60 секунд]
+					.input-row
+						input(type="text" name="name" placeholder="+7 (XXX) XXX-XX-XX").input
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon")
+								.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
+					input(type="submit" value="Получить код").modal-send
+			// phone enter === end
+
+			// phone sms
+			.modal(data-modal="sms")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Вход на сайт
+					.modal-text Введите код подтверждения, чтобы войти в личный кабинет
+					.input-row
+						input(type="text" name="name" placeholder="Код из СМС").input
+					input(type="submit" value="Войти").modal-send
+					a(href="#").modal-link Отправить код еще раз
+			// phone sms === end
+
+
+			// location
+			.modal(data-modal="location")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Ваш город
+					.modal-text Выберите свой город для отображения актуальных товаров и цен
+					.location-list-wrap
+						.location-list.scroll
+							.location-list__el.location-list__el--active Кемерово
+							- for(var i=0;i<4;i++)
+								.location-list__el Москва
+								.location-list__el Санкт-Петербург
+								.location-list__el Волгоград
+			// location === end
+
+			// bad-action
+			.modal(data-modal="bad-action")
+				.modal-content.modal-content--dark
+					.modal-img
+						img(src="img/sleep.svg", alt="")
+					.modal-title Сейчас доставка не работает
+					.modal-text Мы откроемся завтра в 9 утра. Вы можете оформить заказ на завтра.
+					input(type="submit" value="Хорошо").btn--md.btn--light.btn--full.modal-hide
+			// bad-action === end
+
+			// true action
+			.modal(data-modal="true-action")
+				.modal-content
+					.modal-img
+						img(src="img/chef.svg", alt="")
+					.modal-title Благодарим вас за заказ!
+					.modal-text Ваш заказ #[span.type--bold №9854]&nbsp;будет приготовлен и доставлен к вам в течение #[span.type--bold 40 минут]
+					input(type="submit" value="С нетерпением жду!").btn--md.btn--mark.btn--full.modal-hide
+			// true action === end
+
+			// review
+			.modal.modal--xl(data-modal="review")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-head
+						.modal-title Оставить отзыв
+					.get-rating
+						.get-rating-text Ваша оценка
+						.star.star--edit
+							.star-el.star-el--active
+								+icon("star","icon")
+							.star-el.star-el--active
+								+icon("star","icon")
+							.star-el.star-el--active
+								+icon("star","icon")
+							.star-el.star-el--active
+								+icon("star","icon")
+							.star-el
+								+icon("star","icon")
+					form(action="#")
+						.input-cont.input-cont--two
 							.input-row
-								.input-row__title
+								.input-row__title Ваше имя
 								input(type="text" placeholder="Ваше имя" class="input")
-						.input-cont
 							.input-row
-								.input-row__title
-								input(type="text" placeholder="Телефон" class="input")
+								.input-row__title Телефон или e-mail
+								input(type="text" placeholder="Ваш телефон или e-mail" class="input")
+						.input-row
+							.input-row__title Поделитесь своими впечатлениями!
+							textarea(name="info", cols="30", rows="6" placeholder="Сообщение").input
 						.login-remember
 							.check-el
 								label.style-label.style-label--checkbox
 									input(type="checkbox").style-input
 									.style-input-element
 										+icon("checked","icon")
-									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
-						input(type="submit" value="Отправить заявку").modal-send
-			//success message
-			.modal(data-modal="true")
-				.modal-content.modal-content--true
+									.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
+						.btn-row-mid.btn-row-mid--clear
+							input(type="submit" value="Отправить" class="btn--md btn--mark")
+			// review === end
+
+			// review-true action
+			.modal(data-modal="review-true")
+				.modal-content
 					.modal-close
-						+icon("close-fat","icon")
-					+icon("check-round","icon icon-msg")
-					.modal-text-true Сообщение отправленно
+						+icon("close","icon")
+					.modal-img
+						img(src="img/salad.svg", alt="")
+					.title.title--md.type--center Ваш отзыв отправлен
+					.modal-text и появится на сайте сразу после прохождения нашей модерации
+			// review-true action === end
 
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
+			// profile
+			.modal(data-modal="profile")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Личные данные
+					.modal-text Личные данные позволяют быстрее совершать оформление заказа, а также получать новости о наших спецпредложениях
+					.input-row
+						input(type="text" name="name" placeholder="Телефон" value="+7(926)182-38-34").input.input--disable
+					.modal-link.modal-link--auth войти под другим номером
+					.input-row
+						input(type="text" name="name" placeholder="Имя").input
+					.input-row
+						input(type="text" name="name" placeholder="E-mail").input
+					.login-remember
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox").style-input
+								.style-input-element
+									+icon("checked","icon")
+								.style-input-text информировать о скидках и акциях
+					.input-cont.input-cont--two
+						.input-row
+							select.select-beauty
+								option(data-display="Число") Не выбрано
+								- for (var i=0;i<20;i++)
+									option 25
+						.input-row
+							select.select-beauty
+								option(data-display="Месяц") Не выбрано
+								- for (var i=0;i<20;i++)
+									option Январь
+					.input-cont.input-cont--two
+						.input-row
+							select.select-beauty
+								option(data-display="Год") Не выбрано
+								- for (var i=0;i<20;i++)
+									option 1984
+						.input-row.input-row--middle
+							.type--xs будьте внимательны, день рождения нельзя изменить
+					input(type="submit" value="Сохранить").modal-send
+					.modal-link Отмена
+			// profile === end
 
+			// bonus
+			.modal.modal--xl(data-modal="bonus")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Бонусные баллы
+					.modal-text.type--mark.type--bold 1 бонусный балл = 1 рубль
+					.modal-bonus.text.scroll
+						p Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.
+
+						p Бонусные баллы не начисляются на акционные товары.
+						h3 Что это значит?
+
+						p Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+						h3 На что можно потратить баллы?
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+			// bonus === end
+
+			// address
+			.modal(data-modal="address")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Адрес доставки
+					.modal-text Добавленный адрес помогает заполнять форму оформления заказа быстрее
+					.input-row
+						input(type="text" name="name" placeholder="Название адреса (дом, работа)" ).input
+					.input-row
+						input(type="text" name="name" placeholder="Имя").input
+					.input-row
+						input(type="text" name="name" placeholder="E-mail").input
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" name="name" placeholder="Дом").input
+						.input-row
+							input(type="text" name="name" placeholder="№ кв, офис").input
+					.input-cont.input-cont--two
+						.input-row
+							input(type="text" name="name" placeholder="Подъезд").input
+						.input-row
+							input(type="text" name="name" placeholder="Этаж").input
+					.input-cont.input-cont--two
+						.input-row.input-row--middle
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element.style-label--checkbox.js-switch(data-item="intercomMob" data-group="admissionMob")
+										+icon("checked","icon")
+									.style-input-text.type--xs Есть домофон
+						.input-row.js-switch-cont.hidden(data-item="intercomMob" data-group="admissionMob")
+							input(type="text" placeholder="Домофон" class="input")
+					input(type="submit" value="Сохранить адрес").modal-send
+					.modal-link Отмена
+			// address === end
+
+			// reserv
+			.modal(data-modal="reserv")
+				.modal-content.modal-content--md
+					.modal-close
+						+icon("close","icon")
+					.modal-title Забронировать столик
+					.input-cont
+						.input-row
+							select.select-beauty
+								option(data-display="Выберите ресторан") Не выбрано
+								- for (var i=0;i<4;i++)
+									option Москва
+									option Волгоград
+									option Новгород
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Имя").input
+					.input-cont
+						.input-row
+							input(type="text" name="name" placeholder="Телефон").input
+					.input-cont
+						.input-row
+							select.select-beauty
+								- for (var i=0;i<4;i++)
+									option Сегодня
+									option Завтра
+									option 25 марта
+					.input-cont.input-cont--two
+						.input-row
+							select.select-beauty
+								- for (var i=0;i<4;i++)
+									option 10:30
+									option 10:45
+									option 11:00
+						.input-row
+							select.select-beauty
+								- for (var i=0;i<6;i++)
+									option #{i+1} чел
+					.input-cont
+						.input-row
+							textarea(name="info", cols="30", rows="6" placeholder="Ваш комментарий").input
+					input(type="submit" value="Сохранить адрес").modal-send
+			// reserv === end
+
+			// reserv-true action
+			.modal(data-modal="reserv-true")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-img
+						img(src="img/man.svg", alt="")
+					.modal-title Ваша бронь отправлена
+					.modal-text Наш менеджер свяжется с вами в ближайшее время для подтверждения
+			// reserv-true action === end
+
+			// staff
+			.modal(data-modal="staff")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-head
+						.modal-title Оставить отзыв
+					form(action="#")
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Ваше имя" class="input")
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Ваш телефон или e-mail" class="input")
+						.input-row
+							textarea(name="info", cols="30", rows="6" placeholder="Расскажите о себе.").input
+						.upload-wrap
+							.upload-img.upload-img--doc
+							label.upload
+								.upload__icon
+									+icon("upload","icon")
+								.upload__text Прикрепить резюме
+								input(type="file").upload-btn
+						.login-remember
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element
+										+icon("checked","icon")
+									.style-input-text Cогласен с #[a(href="#") условиями обработки]&nbsp;персональных данных
+						.btn-row-mid.btn-row-mid--clear
+							input(type="submit" value="Отправить" class="btn--md btn--mark")
+			// staff === end
+
+			// staff-true action
+			.modal(data-modal="staff-true")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-img
+						img(src="img/spoon.svg", alt="")
+					.modal-title Ваше резюме отправлено
+					.modal-text Наш HR-отдел рассмотрит вашу заявку и когда мы будем готовы - пригласит вас на собеседование
+			// staff-true action === end
+
+			// staff-descr
+			.modal.modal--xl(data-modal="staff-descr")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Пиццайолло
+					.modal-text.type--mark.type--bold Зарплата от 10 000 грн на руки
+					.modal-bonus.text.scroll
+						p Бонусными баллами можно оплатить до 50% от стоимости вашего заказа. Для этого нужно при оформлении заказа выбрать количество баллов, которые вы готовы потратить.
+
+						p Бонусные баллы не начисляются на акционные товары.
+						h3 Что это значит?
+
+						p Еда, приготовленная с душой, всегда только свежие продукты, увлечённые своим делом повара, интересное и разнообразное меню для гурманов и ценителей классики — мы предлагаем попробовать блюда разных кухонь мира и оценить преимущества.
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+						h3 На что можно потратить баллы?
+
+						p Если хочется заказать еду с доставкой домой или в офис, заходите на к нам в кафе по адресу.
+
+						p Повара готовят по традиционным и классическим рецептам, а также воплощают собственные кулинарные идеи. Мы постоянно растём и развиваемся, добавляя в меню новые интересные позиции и совершенствуя условия обслуживания, будь то доставка готовой еды на дом клиенту или в офис для корпоративного праздника.
+			// staff-descr === end

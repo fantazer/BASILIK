@@ -1,0 +1,23 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			+bread()
+			.title.title--lg Наши гости
+			.text
+				p Несколько строк текста о том, что к вам приходят разные знаменитости и остаются навсегда привязанными к вашему заведению. Мне подача блюда понравилась - смотрится красиво, есть защитная пленка, блюдо свежее. Красиво оформлено, разнообразный состав. Смутил только майонез, но в принципе, ничего страшного.
+			.guests
+				- for (var i=0;i<6;i++)
+					.guests__el
+						img(src="img/guest-"+(i+1)+".jpg", alt="").guests__el-img
+						.guests-info Джастин Тимберлейк
+							a(href="#") @timber_jas
+			.guests-msg
+				img(src="img/heart.svg", alt="")
+				.guests-msg-text Будем рады вашему визиту, <br>	с нетерпением ждём у нас в гостях!
+
+	+footer()
+include ./block_html/_script.pug

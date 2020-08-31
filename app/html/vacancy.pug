@@ -1,0 +1,65 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+
+.page
+	+header()
+	.content
+		.main-cont
+			.info-banner(style="background-image:url('img/vacancy.jpg')")
+			.about-cont
+				.title-row
+					.arrow(onclick="window.history.go(-1); return false;")
+						+icon("arrow-conner-left","icon")
+					.title.title--lg Вакансии
+				.info-descr.text
+					p Мы уверенны, у нас ты получишь новые знания, будешь хорошо зарабатывать и обретешь много друзей.
+
+					p Даже  если это твой первый опыт, мы научим тебя быть профессионалом своего дела. Мы приложим все усилия, чтобы тебе было интересно и комфортно работать. Желаю тебе скорейшего достижения успехов в работе! Всё обязательно получится!»
+			.vacancy
+				- for (var i=0;i<2;i++)
+					.vacancy__el
+						.vacancy__el-img(style="background-image:url('img/vacancy-el-2.jpg')")
+						.vacancy__el-info
+							.vacancy__el-title Оператор call-центра
+							.vacancy__el-row
+								.vacancy__el-row-title Обязанности:
+								.vacancy__el-descr.text
+									ul
+										li прием входящих звонков;
+										li предоставление информации по меню, акциям и ассортименту;
+										li оформление заказов по системе IIKO;
+										li обработка заказа, передача в ресторан.
+							.vacancy__el-row
+								.vacancy__el-row-title Требования:
+								.vacancy__el-descr.text
+									ul
+										li грамотная речь и четкая дикция;
+										li внимательность, ответственность;
+										li знание ПК;
+							.vacancy__el-row
+								.vacancy__el-row-title Условия:
+								.vacancy__el-descr.text
+									ul
+										li предварительная стажировка (оплачивается);
+										li трудоустройство по Трудовому кодексу РФ;
+										li сменный график;
+										li комфортное рабочее место, молодой коллектив девушек;
+										li ночной развоз после 22-00 до дома, доплата за питание;
+							.btn--md.btn--mark Откликнуться
+			.person
+				.person-info
+					.title.title--md Почему 8 из 10 соискателей выбирают Basilic
+					.text
+						p Наши сотрудники – это основа нашего бизнеса, поэтому мы заботимся о своих сотрудниках предоставляя им:
+						ul
+							li своевременная оплата
+							li бесплатное обучение
+							li карьерный рост
+							li двухразовое питание
+				.person-tool
+					.title.title--md Связаться с нами
+					a(href="#").person-get.btn--mark.btn--md тел. +7 776 846 0206
+					a(href="#").person-get.btn--mark.btn--md Написать Whatsapp
+	+footer()
+include ./block_html/_script.pug

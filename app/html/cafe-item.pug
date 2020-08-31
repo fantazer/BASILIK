@@ -1,0 +1,50 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			+bread()
+			.title-row.title-row--btn
+				.title-row-info
+					.arrow(onclick="window.history.go(-1); return false;")
+						+icon("arrow-conner-left","icon")
+					.title.title--lg ул. Ш. Косшыгулулы, 24
+				.btn--sm.btn--mark Забронировать столик
+			.cafe-item
+				.cafe-item__img-wrap
+					.cafe-item__img
+						.gallery-slider-wrap
+							.gallery-slider
+								- for (var i=1;i<5;i++)
+									.gallery__el(style="background-image:url('img/restaurant-item-"+i+".jpg')")
+							.gallery-slider-nav
+								- for (var i=1;i<6;i++)
+									.gallery__el-nav-wrap
+										.gallery__el-nav(style="background-image:url('img/restaurant-item-"+i+".jpg')")
+
+				.cafe-item__cont
+					.cafe-item__title Время работы
+					.cafe-item__time
+						span 11:00 - 24:00 (Вс - Чт)
+						span 11:00 - 01:00 (Пт - Сб)
+					a(href="#").cafe-item__phone +7 132 123 12 12
+					.cafe-item__phone-text Прием заказов с 11:00 до 23:30
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("wi-fi","icon")
+						.cafe-item__adv-text Бесплатный Wi-Fi
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("parking","icon")
+						.cafe-item__adv-text Большая парковка на 30 мест
+					.cafe-item__adv
+						.cafe-item__adv-icon
+							+icon("food","icon")
+						.cafe-item__adv-text Банкетный зал на 80 человек
+					.cafe-item__text.text
+						p Благодаря высоким потолкам и большим окнам в ресторане всегда много воздуха и света. Разработкой интерьера занимался талантливый московский дизайнер Андрей Цыганков. Спокойные тона разбавляются мягкими диванами лазурного цвета и зеленью живых растений. В качестве материала было использовано натуральное дерево, что делает интерьер
+					a.btn--sm.btn--light.btn--mobile скачать меню в pdf
+	+footer()
+include ./block_html/_script.pug

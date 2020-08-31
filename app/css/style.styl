@@ -70,6 +70,7 @@ body
 	color $gray
 .page-error__img
 	margin-bottom: 30px
+	max-width 640px
 .page-error__text
 	@extend .type--md
 	color $gray
@@ -121,12 +122,16 @@ body
 	position: absolute
 	opacity 0
 	transition transform .6s, opacity .8s
-	max-width 400px
+	width 420px
 	left -9999px
 	top -9999px
 	.order__row
 		margin-bottom: 20px
 		border-bottom 0
+.modal--xl
+	+below(960px)
+		width: 100%
+	width 860px
 
 .modal-content
 	+below(640px)
@@ -138,7 +143,7 @@ body
 	background: white
 	position: relative
 	padding: 40px 45px
-	br(40px)
+	br(10px)
 
 .modal__show
 	max-height 100%
@@ -156,11 +161,11 @@ body
 		top 12px
 		right 12px
 	position: absolute
-	top: 20px
-	right: 20px
+	top: 10px
+	right: 10px
 	cp()
 	size 50px
-	br(20px)
+	br(10px)
 	flex(mid)
 	z-index 10
 	background: #f8f8f8
@@ -199,8 +204,8 @@ body
 		font-size: 20px
 	margin-bottom: 20px
 	text-align: center
-	@extend .type--xl
 	font-weight: 700
+	font-size: 32px
 
 .modal-text
 	+below(768px)
@@ -210,12 +215,69 @@ body
 	margin: 20px auto
 	//width: 80%
 	line-height: 1.6
-
+	@extend .type--sm
 
 .modal-send
 	@extend .btn--md
 	@extend .btn--mark
 	width: 100%
+
+.modal-link
+	color $mark
+	border-bottom 1px dashed $mark
+	display table
+	margin: 20px auto 0 auto
+	cp()
+	@extend .type--sm
+.modal-link--auth
+	margin: 0
+	margin-top: -10px
+	margin-bottom: 20px
+	cp()
+.modal-content--dark
+	background: black
+	.modal-title
+		color white
+	.modal-text
+		color white
+.modal-img
+	margin: 0 auto 20px auto
+	flex(mid)
+
+// review modal
+.get-rating
+	f()
+	align-items: center
+	.icon
+		cp()
+	margin-bottom: 20px
+.get-rating-text
+	+below(640px)
+		font-size: 13px
+	margin-right: 20px
+	font-weight: 700
+
+.star-el--active
+	.icon
+		fill red!important
+
+.star
+	f()
+	.icon
+		size 20px
+		cp()
+		fill $border-color
+.star-el
+	margin-right: 5px
+// review modal === end
+
+.modal-bonus
+	position relative
+	//max-height 500px
+	padding-right: 20px
+	margin-right: -20px
+	width calc(100% + 20px)
+
 // modal === end
 
 // cookie
@@ -861,27 +923,29 @@ body
 //Навигация снаружи
 .slider-wrap--simple
 	.slider-control
-		round()
+		+below(678px)
+			display none
 		flex(mid)
 		tr(all)
-		size 40px
-		background: white
+		cp()
+		br(4px)
 		position: absolute
 		top 50%
-		margin-top: -20px
-		box-shadow 0px 2px 10px #c5c2c2
+		margin-top: -25px
 		z-index 10
-		cp()
+		background: white
+		size 50px
+		border 1px solid $border-color
+		transform rotate(45deg)
 		&:hover
-			background: $red
-			.icon
-				fill white
+			border 1px solid $mark
 		.icon
-			size 14px
+			size 15px
+			transform rotate(-45deg)
 	.slider-control--left
-		left -20px
+		left -80px
 	.slider-control--right
-		right -20px
+		right -80px
 //Навигация снаружи end
 
 //Навигация внутри
@@ -961,6 +1025,10 @@ body
 	.slick-slide
 		margin: 0 20px
 
+.slick-slide
+	margin: 0 15px
+.slick-list
+	margin: 0 -15px
 // === Для центрального вида end ===
 // slick === end
 
@@ -2907,3 +2975,286 @@ select.select-beauty
 		background: #f5f5f5
 	.footer
 		background: white
+
+// staff slider
+.staff-slider
+	margin-bottom: 60px
+.staff-img
+	bg-full()
+	padding: 55% 10%
+	br(10px)
+	margin-bottom: 10px
+.staff-name
+	font-weight: 700
+	margin-bottom: 10px
+// staff slider === end
+
+// inst slider
+.inst-img
+	bg-full()
+	padding: 55% 10%
+	br(10px)
+
+.inst-slider
+	margin-bottom: 60px
+// inst slider === end
+
+// finance
+.finance
+	display: grid
+	grid-gap 30px
+	grid-template-columns: repeat(3, 1fr)
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+// finance === end
+
+//.vacancy
+.vacancy__el
+	f()
+	justify-content space-between
+	align-items: flex-start
+	margin-bottom: 60px
+.vacancy__el-img
+	bg-full()
+	br(10px)
+	padding: 15% 10%
+	margin-right: 40px
+	width: 30%
+.vacancy__el-info
+	width: 70%
+.vacancy__el-title
+	font-size: 30px
+	font-weight: 700
+	margin-bottom: 20px
+.vacancy__el-row
+	margin-bottom: 20px
+.vacancy__el-row-title
+	font-weight: 700
+	margin-bottom: 10px
+
+.person
+	f()
+	justify-content space-between
+.person-info
+	width: 80%
+	padding: 30px
+	border-radius 5px
+	border 2px solid $mark
+	.title
+		margin-bottom: 20px
+	p
+		margin-bottom: 0
+	ul
+		margin-bottom: 0
+
+.person-tool
+	margin-left: 40px
+	.title
+		margin-bottom: 20px
+.person-get
+	margin-bottom: 20px
+
+// restaurant
+.restaurant
+	+below(960px)
+		grid-gap 20px
+		grid-template-columns: repeat(auto-fill, minmax(18rem,1fr))
+	display: grid
+	//grid-template-columns: repeat(5, 1fr)
+	grid-template-columns: repeat(auto-fill, minmax(22rem,1fr))
+.restaurant-item
+	padding: 30px
+	br(10px)
+	tr()
+	&:hover
+		box-shadow 0 25px 40px rgba(0, 0, 0, 0.1)
+.restaurant-item__img
+	bg-full()
+	padding: 45% 10%
+	display: block
+	position: relative
+	br(10px)
+	overflow hidden
+.restaurant-item__cont
+	padding-top: 20px
+.restaurant-item__title
+	font-weight 700
+	line-height: 1.6
+	margin-bottom: 10px
+	display: block
+.restaurant-item__time
+	color $gray
+	@extend .type--sm
+	line-height: 1.4
+	margin-bottom: 5px
+	&:last-child
+		margin-bottom: 0
+
+// restaurant === end
+
+// ==== restaurant FULL
+.cafe-item
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+	margin-bottom: 50px
+.cafe-item__img-wrap
+	+below(768px)
+		width: 100%
+		margin-bottom: 10px
+	width: 55%
+.cafe-item__img-el
+	+below(768px)
+		margin-bottom: 20px
+	bg-full()
+	padding: 30% 10%
+	br(20px)
+.cafe-item__cont
+	+below(768px)
+		width: 100%
+	width: calc(45% - 40px)
+.cafe-item__title
+	+below(1024px)
+		font-size: 28px
+	+below(768px)
+		font-size: 24px
+	+below(640px)
+		margin-bottom: 10px
+		font-size: 20px
+	color $dark
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 20px
+.cafe-item__time
+	+below(640px)
+		margin-bottom: 20px
+
+	margin-bottom: 20px
+	span
+		display: block
+		margin-bottom: 10px
+		@extend .type--sm
+		color $gray
+.cafe-item__phone
+	display: block
+	color $dark
+	@extend .type--md
+	font-weight: 700
+	margin-bottom: 10px
+.cafe-item__phone-text
+	margin-bottom: 30px
+	color $gray
+	@extend .type--sm
+.cafe-item__text
+	+below(768px)
+		margin: 0
+	padding-right: 20px
+.cafe-item__adv
+	f()
+	align-items center
+	margin-bottom: 20px
+.cafe-item__adv-icon
+	.icon
+		fill $mark
+		size 28px
+		margin-right: 20px
+//.icon
+.cafe-item__adv-text
+	font-weight: 700
+.cafe-get
+	@extend .btn--lg
+	@extend .btn--light
+	margin: 20px 0
+	padding: 15px 40px
+	font-weight: 700
+// ==== restaurant FULL === end
+
+// gallery
+.gallery__el
+	bg-full()
+	padding: 40% 10%
+	br(10px)
+.gallery__el-nav
+	bg-full()
+	br(10px)
+	cp()
+	padding: 40% 10%
+
+.gallery-slider-nav
+	.slick-slide
+		+below(640px)
+			margin: 0 5px
+		margin: 0 10px
+	.slick-current
+		tr()
+		opacity: .4
+	.slick-track
+		margin-left: 0px
+	.slick-list
+		+below(640px)
+			margin: 0 -5px
+		margin: 0 -10px
+.gallery-slider
+	margin-bottom 10px
+
+// gallery === end
+
+// guests
+.guests
+	column-count 2
+	column-gap 40px
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+.guests__el
+	br(10px)
+	position relative
+	margin-bottom: 40px
+.guests-info
+	position absolute
+	border-radius 0 10px 0 10px
+	background: #1d1d1bb0
+	color white
+	z-index 2
+	left 0
+	bottom 0
+	padding: 12px 30px
+	a
+		color $mark
+.guests-msg
+	margin: 30px auto 0 auto
+	flex(mid)
+	fl()
+	img
+		margin-bottom: 20px
+.guests-msg-text
+	text-align center
+	line-height: 1.4
+	font-weight: 700
+// guests === end
+
+.location-list-wrap
+	position relative
+	&:before
+		z-index 10
+		content ""
+		position absolute
+		bottom -15px
+		left 0
+		background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+		width: 100%
+		height: 90px
+
+.location-list
+	max-height 300px
+	position relative
+	padding-right: 40px
+	width calc(100% + 40px)
+	margin-right: -40px
+	padding-bottom: 60px
+.location-list__el
+	@extend .btn--md
+	@extend .btn--light
+	font-size: 15px
+	display block
+	margin-bottom: 10px
+.location-list__el--active
+	background: $mark

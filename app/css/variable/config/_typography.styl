@@ -139,9 +139,19 @@ p
 		margin-bottom: 30px
 	ul
 		margin-bottom: 30px
+		padding-left: 20px
+		list-style none
 		li
 			line-height: 1.6
-			margin-bottom: 10px
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 12px
+				left -14px
+				size 6px
+				round()
+				background: $gray
 			&:last-child
 				margin-bottom: 0
 

@@ -1,0 +1,23 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			+bread()
+			.title-row.title-row--btn
+				.title-row-info
+					.title.title--lg Наши кафе
+			.map
+				.map__el(style="background-image:url('img/map-full.jpg')")
+			.restaurant
+				- for (var i=0;i<5;i++)
+					a(href="#").restaurant-item
+						.restaurant-item__img(style="background-image:url('img/restaurant-item-1.jpg')")
+						.restaurant-item__cont
+							.restaurant-item__title ул. Юлиуса Фучика, д. 88
+							.restaurant-item__time 11:00 - 24:00 (Вс - Чт)
+							.restaurant-item__time 11:00 - 01:00 (Пт - Сб)
+	+footer()
+include ./block_html/_script.pug
