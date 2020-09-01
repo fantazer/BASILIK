@@ -26,7 +26,7 @@ include block_html/_include.pug
 					p Да, и доставка тоже есть! Ждееем!
 
 			.title.title--lg Наша команда
-			.slider-wrap.slider-wrap--simple
+			.slider-wrap.slider-wrap--simple.slider-list
 				.slider-control.slider-control--left
 					+icon("arrow-left-fat","icon")
 				.slider-control.slider-control--right
@@ -39,14 +39,15 @@ include block_html/_include.pug
 							.staff-position Шеф Повар
 
 			.title.title--lg Наш инстаграм
-			.slider-wrap.slider-wrap--simple
+			.slider-wrap.slider-wrap--simple.slider-list
 				.slider-control.slider-control--left
 					+icon("arrow-left-fat","icon")
 				.slider-control.slider-control--right
 					+icon("arrow-right-fat","icon")
 				.inst-slider.slider-item
 					- for (var i=0;i<8;i++)
-						.inst-img(style="background-image:url('img/inst-1.jpg')")
+						.inst-img-wrap
+							.inst-img(style="background-image:url('img/inst-1.jpg')")
 
 			.title.title--md Юридическое лицо
 			.finance
