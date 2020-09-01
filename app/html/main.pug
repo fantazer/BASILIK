@@ -34,13 +34,13 @@ include block_html/_include.pug
 
 			//NOTE !!! colors tags => Классика - #111415; Вок - #45010b; Шоколадно - #6d2200; Хит - #b40007; Остро - #ff3d00; Новинка - #fe54a1; По-новому - #ffc400; Полезно - #ff9900; Микс - #afcb08; Летний - #65be05; Basilic - #3ead48; Шалом - #006e35; После еды - #00b49b; Рыбно - #3070b9; Популярно - #4032a2; Домашние - #8e00c1;
 
-			.section-title Блюда на компанию
-			.product-cont
+			.section-title.mobile--hidden Блюда на компанию
+			.product-cont.mobile--hidden
 				- for (var i=0;i< 7;i++)
 					+product()
 
-			.section-title Завтраки
-			.product-cont
+			.section-title.mobile--hidden Завтраки
+			.product-cont.mobile--hidden
 				- for (var i=0;i< 6;i++)
 					+product("item-4.jpg")
 			.btn-row-mid
@@ -76,11 +76,11 @@ include block_html/_include.pug
 								span Быстрый и удобный заказ в два клика
 
 		.main-cont
-			.section-title Завтраки
-			.product-cont
+			.section-title.mobile--hidden Завтраки
+			.product-cont.mobile--hidden
 				- for (var i=0;i< 6;i++)
 					+product("item-3.jpg")
-			.btn-row-mid
+			.btn-row-mid.mobile--hidden
 				a(href="#").product-more.btn--sm.btn--light.btn--mobile Показать все 45 блюд
 
 			.section-title Акции и новости

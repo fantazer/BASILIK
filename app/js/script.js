@@ -242,7 +242,7 @@ $(document).ready(function () {
 		});
 	}
 	slideDown('.header-nav__more span',".header-nav-sub")
-	slideDown('.search .icon',".search-wrap")
+	//slideDown('.search .icon',".search-wrap")
 	// more header menu === end
 
 	// slider
@@ -422,6 +422,15 @@ $(document).ready(function () {
 		$(this).remove();
 	});
 	//upload-btn
+
+	$(window).scroll(function() {
+		 if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
+				 $('.noty-wrap').addClass("noty-wrap--hidden");
+		 }else{
+				 $('.noty-wrap').removeClass("noty-wrap--hidden");
+		 }
+	});
+
 
 	//window.condition = {};
 	//window.condition.info = info;

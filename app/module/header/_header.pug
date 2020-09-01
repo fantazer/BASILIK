@@ -48,10 +48,11 @@ mixin header()
 
 				.header-nav
 					each item,i in headerNav
-						a(href="#" class=i>6?'header-nav__el--mobile':'').header-nav__el #{item}
+						a(href="#" class=i>5?'header-nav__el--mobile':'').header-nav__el #{item}
 					.header-nav__more
 						span Eще
 						.header-nav-sub
+							a(href="#").header-nav-sub__el--mobile Шашлыки и гриль
 							a(href="#").header-nav-sub__el--mobile Гарниры
 							a(href="#").header-nav-sub__el--mobile Соусы
 							a(href="#").header-nav-sub__el Десерты
@@ -64,7 +65,7 @@ mixin header()
 					+icon("search","icon")
 				a(href="#").header-cart
 					+icon("cart","icon")
-					.header-cart__cost 1249 р
+					.header-cart__cost 1249 ₸
 					.header-cart__size 5
 					.cart-bubble-wrap.hidden
 						// NOTE!!! REMOVE Class .hidden

@@ -242,7 +242,7 @@ $(document).ready(function () {
 		});
 	}
 	slideDown('.header-nav__more span',".header-nav-sub")
-	slideDown('.search .icon',".search-wrap")
+	//slideDown('.search .icon',".search-wrap")
 	// more header menu === end
 
 	// slider
@@ -255,6 +255,47 @@ $(document).ready(function () {
 				return '<span class="dot"></span>';
 			},
 		});
+
+		$('.staff-slider').slick({
+			slidesToShow: 4,
+			speed: 500,
+			dots: false,
+			arrows: false,
+		});
+		$('.inst-slider').slick({
+			slidesToShow: 3,
+			speed: 500,
+			dots: false,
+			arrows: false,
+		});
+
+		// gallery
+		$('.gallery-slider').slick({
+				slidesToShow: 1,
+				speed: 500,
+				dots:false,
+				arrows:false,
+				asNavFor: '.gallery-slider-nav',
+
+			});
+		$('.gallery-slider-nav').slick({
+			slidesToShow: 5,
+			speed: 500,
+			dots:false,
+			arrows:false,
+			asNavFor: '.gallery-slider',
+			focusOnSelect: true,
+			responsive: [
+
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 4
+					}
+				}
+			],
+		});
+		// gallery === end
 
 
 		// === custom arrow el ===
@@ -362,6 +403,34 @@ $(document).ready(function () {
 		});
 	}
 	//stick scroll
+
+	//upload-btn
+	$(".upload-btn").change(function () { //Если выбрал файл
+		console.log('img');
+		if (this.files && this.files[0]) {
+			$('.upload-img').append('<div class="upload-img__el" onclick="this.parentNode.removeChild(this);"></div>');
+			var currentUpload = $('.upload-img .upload-img__el:last'); //выбираем куда
+			var reader = new FileReader();
+			reader.onload = function(){
+				currentUpload.attr('style', " background-image:url( "+reader.result+ ") ");
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	});
+	$('.upload-img__el').click(function(){
+		console.log('remove');
+		$(this).remove();
+	});
+	//upload-btn
+
+	$(window).scroll(function() {
+		 if($(window).scrollTop() + $(window).height() > $(document).height() - 300) {
+				 $('.noty-wrap').addClass("noty-wrap--hidden");
+		 }else{
+				 $('.noty-wrap').removeClass("noty-wrap--hidden");
+		 }
+	});
+
 
 	//window.condition = {};
 	//window.condition.info = info;

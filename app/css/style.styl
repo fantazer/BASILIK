@@ -332,7 +332,7 @@ body
 	.icon
 		position absolute
 		top calc(50% - 6px)
-		right 30px
+		right 15px
 		size 12px
 		tr()
 
@@ -366,12 +366,19 @@ body
 		background: white
 		color black
 .dropdown--light
+	+below(768px)
+		border 1px solid $border-color
 	border 0
 	@extend .type--sm
 	.dropdown-menu
+		+below(768px)
+			margin-top:0
 		margin-top: 10px
 	.dropdown-current
-		padding: 0 55px 0 10px
+		+below(768px)
+			padding: 10px 35px 10px 10px
+
+		padding: 0 35px 0 10px
 		border 0
 	.dropdown-menu__el
 		padding 10px
@@ -385,6 +392,9 @@ body
 		left 0
 	background: $dark
 	padding: 7px 0
+	tr()
+.noty-wrap--hidden
+	transform translateY(100%)
 .noty
 	+below(768px)
 		fw()
@@ -451,7 +461,9 @@ body
 		margin-right: 5px
 		border-left 1px solid $border-color
 		padding: 0 10px
+	height: 50px
 	position relative
+	z-index 10
 	f()
 	align-items center
 	.icon
@@ -494,18 +506,17 @@ body
 	margin-left auto
 	background: white
 	.icon
-		size 26px
+		size 20px
 		fill $gray
-		position relative
 		cp()
+		position absolute
+		top calc(50% - 10px)
+		left: 10px
 .search-wrap
-	top -12px
-	right: -10px
 	@extend .type--sm
-	position absolute
-	display none
 	.input
-		padding-right: 40px
+		padding-left: 40px
+		height: 50px
 .header-location
 	f()
 	align-items center
@@ -605,6 +616,9 @@ body
 		margin-bottom: 10px
 		&:last-child
 			margin-bottom: 0
+.header-nav-sub__el--mobile
+	+above(1600px)
+		display none!important
 // header === end
 
 // slide menu
@@ -733,7 +747,6 @@ body
 		margin-right: 15px
 
 .header-contact__loc
-	@extend .type--md
 	color $dark
 	white-space nowrap
 	font-weight 700
@@ -782,6 +795,9 @@ body
 		background: darken($snow,10)
 
 .cart-bubble-wrap
+	+below(640px)
+		right: -50px
+		top calc(100% + 10px)
 	position: absolute
 	top calc(100% + 20px)
 	right 0
@@ -790,11 +806,14 @@ body
 	br(10px)
 	overflow hidden
 .cart-bubble
+	+below(640px)
+		width: calc(100vw - 10px)
 	flex(mid)
 	padding: 20px
 	background: white
 	z-index 100
 	width: 360px
+	line-height: 1.4
 	.icon
 		fill $mark
 		size 42px
@@ -973,6 +992,8 @@ body
 	.slider-control--right
 		right 30px
 	.slick-dots
+		+below(1280px)
+			bottom 15px
 		bottom 30px
 //Навигация внутри
 // === for custom navigation ===
@@ -991,14 +1012,15 @@ body
 			size 10px
 			flex(mid)
 	.dot
-		+below(720px)
+		+below(1024px)
 			flex(mid)
-			size 6px
+			size 8px
 		background: white
 		size 15px
 		display: block
 		opacity: .8
 		round()
+		border 1px solid $border-color
 	.slick-active
 		.dot
 			opacity: 1
@@ -1024,11 +1046,11 @@ body
 		padding: 100px 80px!important
 	.slick-slide
 		margin: 0 20px
-
-.slick-slide
-	margin: 0 15px
-.slick-list
-	margin: 0 -15px
+.slider-list
+	.slick-slide
+		margin: 0 15px
+	.slick-list
+		margin: 0 -15px
 // === Для центрального вида end ===
 // slick === end
 
@@ -1052,8 +1074,13 @@ body
 
 .main-slider
 	+below(768px)
-		margin-bottom: 10px
+		margin-bottom: -10px
 	margin-bottom: 40px
+
+
+.slider-wrap--main
+	+below(768px)
+		margin-bottom: -20px
 // main slider === end
 
 // kind
@@ -1062,6 +1089,9 @@ body
 		grid-template-columns: repeat(2, 1fr)
 		grid-gap 10px
 		margin-bottom: 15px
+	+below(480px)
+		grid-template-columns: 1fr
+
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(4, 1fr)
@@ -1087,6 +1117,8 @@ body
 .kind__el-title
 	+below(1024px)
 		font-size: 16px
+	+below(640px)
+		font-size: 18px
 	position absolute
 	bottom 0
 	left 0
@@ -1097,13 +1129,16 @@ body
 	font-weight 700
 
 .kind-sm
-	flex(mid)
+	+below(768px)
+		margin-bottom: 20px
+	fw()
+	f()
+	align-items center
 	margin-bottom: 50px
 .kind__sm-el
-	+below(640px)
-		width: 50%
-		padding: 15px 5px
+	+below(768px)
 		font-size: 16px
+		margin: 5px
 	@extend .btn--sm
 	color white
 	font-weight 700
@@ -1150,23 +1185,24 @@ body
 	f()
 	fl()
 	background: white
-	&:hover
-		z-index 5
-		box-shadow 0 25px 40px rgba(0, 0, 0, 0.1)
-		border-radius 25px 25px 0 0
-		.product-el-wrap
-			//position absolute
-			border-radius 25px 25px 0 0
-			top 0
-			left 0
-			width: 100%
-			background: white
-		.product-box
+	+above(1024px)
+		&:hover
+			z-index 5
 			box-shadow 0 25px 40px rgba(0, 0, 0, 0.1)
-			display block
-		.item-add
-			opacity: 1
-			visibility visible
+			border-radius 25px 25px 0 0
+			.product-el-wrap
+				//position absolute
+				border-radius 25px 25px 0 0
+				top 0
+				left 0
+				width: 100%
+				background: white
+			.product-box
+				box-shadow 0 25px 40px rgba(0, 0, 0, 0.1)
+				display block
+			.item-add
+				opacity: 1
+				visibility visible
 .product-el--sm
 	border-radius 25px!important
 	.product-el-wrap
@@ -1180,6 +1216,8 @@ body
 	border-radius 0 0 20px 20px
 	background: white
 .product-el-wrap
+	+below(1024px)
+		padding: 0
 	f()
 	fl()
 	padding: 20px
@@ -1188,6 +1226,7 @@ body
 	background: white
 	border 1px solid transparent
 	height: 100%
+	width: 100%
 .product-el--sm
 	.product-footer
 		margin-top: 0
@@ -1197,9 +1236,6 @@ body
 		font-size: 18px
 
 .product__img
-	+below(480px)
-		size 90px
-		margin: 5px
 	flex(mid)
 	position relative
 	overflow: hidden
@@ -1245,11 +1281,6 @@ body
 	.product__img-el
 		padding: 35% 10%
 .product__cont
-	+below(480px)
-		width calc(100% - 100px)
-		.size
-			display none
-		padding:10px
 	f()
 	fl()
 	flex-grow 1
@@ -1285,9 +1316,8 @@ body
 	margin-bottom: 10px
 	@extend .type--sm
 .product-cont
-	+below(1024px)
+	+below(768px)
 		grid-gap 20px
-	+below(640px)
 		grid-template-columns: repeat(2, 1fr)
 	+below(480px)
 		grid-template-columns: 1fr
@@ -1316,14 +1346,8 @@ body
 	flex(between)
 	margin-top: auto
 .product-price
-	+below(1200px)
-		font-size: 14px
 	+below(1024px)
 		font-size: 24px
-	+below(640px)
-		font-weight: 700
-	+below(480px)
-		font-size: 16px
 	@extend .type--md
 	background-color #ffffff
 	font-weight 700
@@ -1353,9 +1377,6 @@ body
 		background: $mark
 
 .product-el--add
-	+below(480px)
-		left 10px
-		right initial
 	br(10px)
 	padding: 5px 10px
 	flex(mid)
@@ -1374,6 +1395,9 @@ body
 	@extend .type--xs
 
 .item-add
+	+below(768px)
+		opacity: 1
+		visibility: visible
 	br(5px)
 	flex(mid)
 	cp()
@@ -1388,6 +1412,8 @@ body
 		size 16px
 		fill white
 .product-kkal__title
+	+below(1024px)
+		font-size: 12px
 	margin-bottom: 5px
 	@extend .type--sm
 
@@ -1408,6 +1434,8 @@ body
 // PRODUCT === end
 
 .section-title
+	+below(768px)
+		margin-bottom: 30px
 	text-align center
 	@extend .type--xl
 	font-weight 700
@@ -1416,17 +1444,29 @@ body
 
 // app banner
 .app-wrap
+	+below(768px)
+		margin: 30px 0
+		padding: 30px 0
 	padding: 60px 0
 	background: #f5f5f5
 	margin: 50px 0
 .app
+	+below(768px)
+		fw()
 	f()
 	justify-content space-between
 .app-img
+	+below(768px)
+		width: 100%
+		flex(mid)
+		margin-bottom: 40px
 	width: 45%
 .app-cont
+	+below(768px)
+		width: 100%
 	width: 50%
 .app-title
+	line-height: 1.4
 	color $dark
 	@extend .type--lg
 	font-weight 700
@@ -1435,26 +1475,40 @@ body
 	line-height: 1.6
 	margin-bottom: 15px
 .app-row
+	+below(768px)
+		justify-content: space-around
 	flex(between)
 	margin-bottom: 30px
-//.app-row__el
+.app-row__el
+	+below(768px)
+		margin-right: 10px
 //.app-adv
 .app-adv__el
+	+below(640px)
+		align-items flex-start
 	f()
 	align-items center
 	margin-bottom: 15px
+	line-height: 1.4
 	&:last-child
 		margin-bottom: 0
 	.icon
+		+below(640px)
+			margin-top: 3px
 		size 18px
 		margin-right: 10px
 		fill $mark
 	span
+		width calc(100% - 40px)
 		@extend .type--sm
 // app banner === end
 
 // sale-list
 .sale-list
+	+below(768px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(480px)
+		grid-template-columns: 1fr
 	display: grid
 	grid-gap 20px
 	grid-template-columns: repeat(4, 1fr)
@@ -1463,12 +1517,15 @@ body
 	grid-gap 20px
 	grid-template-columns: repeat(3, 1fr)
 .sale-el
+	+below(640px)
+		padding: 0
 	padding: 20px
 	br(20px)
 	tr()
-	&:hover
-		z-index 5
-		box-shadow 0 25px 40px rgba(0, 0, 0, 0.1)
+	+above(1024px)
+		&:hover
+			z-index 5
+			box-shadow 0 25px 40px rgba(0, 0, 0, 0.1)
 .sale-el__img
 	bg-full()
 	padding: 50% 10%
@@ -1515,10 +1572,14 @@ body
 
 // create
 .create
+	+below(1600px)
+		margin-left auto
+	+below(640px)
+		width: 100%
+		margin: 10px 0
+		justify-content: flex-start
 	flex(mid)
 	span
-		+below(640px)
-			width: 100%
 		@extend .type--sm
 		display inline-block
 		margin-right: 10px
@@ -1526,18 +1587,44 @@ body
 
 // foooter
 .footer
+	+below(1600px)
+		fw()
+		justify-content center
+	+below(640px)
+		padding: 30px 15px
+		justify-content flex-start
 	padding: 18px 30px
 	background: $snow
 	f()
 	align-items center
 	justify-content space-between
 .footer-nav
+	+below(1600px)
+		width: 100%
+		margin-bottom: 20px
+	+below(1024px)
+		justify-content: flex-start
+		display block
+	+below(768px)
+		margin-bottom: 0
 	flex(between)
 	width: 70%
 .footer-nav__el
+	+below(1024px)
+		display none
 	@extend .type--sm
 	&:hover
 		color $mark
+.footer-nav__el--mark
+	+below(1024px)
+		display block
+		margin-bottom: 20px
+	color $mark
+.footer-payment
+	+below(1600px)
+		margin: 0 20px
+	+below(640px)
+		margin 0 0 0 auto
 // foooter === end
 
 
@@ -1568,18 +1655,34 @@ body
 
 // sort
 .sort
+	+below(768px)
+		fw()
 	flex(between)
 .sort__el
+	+below(768px)
+		width: 100%
+		justify-content: flex-start
+		margin-bottom: 10px
+		fw()
+		&:last-child
+			margin-bottom: 0
 	flex(mid)
 	cp()
 .sort-title
+	+below(768px)
+		margin-bottom: 5px
 	color $gray
 	@extend .type--sm
 	margin-right: 10px
 .sort-tag-wrap
+	+below(768px)
+		width: 100%
 	f()
+	fw()
 	align-items center
 .sort-tag
+	+below(768px)
+		margin: 5px 5px 5px 0
 	padding: 5px 15px
 	@extend .type--sm
 	br(5px)
@@ -1649,6 +1752,7 @@ body
 .item-wrap
 	+below(768px)
 		fw()
+		margin-bottom: 0
 	f()
 	justify-content space-between
 	align-items: flex-start
@@ -1676,6 +1780,8 @@ body
 .item-size
 	margin-bottom: 20px
 .item-config-row
+	+below(640px)
+		margin-bottom: 0
 	margin: 30px 0
 .ingr-row
 	f()
@@ -1705,12 +1811,15 @@ body
 	color $gray
 	white-space nowrap
 .ingr-total
+	+below(640px)
+		margin-left: 10px
 	white-space nowrap
 .item-total
 	+below(1024px)
 		fw()
 	+below(640px)
 		fl()
+		width: 100%
 	f()
 	align-items center
 	margin-bottom: 40px
@@ -1729,6 +1838,8 @@ body
 	f()
 	align-items: flex-end
 .item-total__cost
+	+below(768px)
+		font-size: 32px
 	@extend .type--lg
 	white-space nowrap
 	font-weight 700
@@ -1749,6 +1860,10 @@ body
 .item-prod
 	margin: 20px 0
 	@extend .type--sm
+.item-condition-wrap
+	+below(768px)
+		flex(mid)
+		fl()
 // item card === end
 
 // structure
@@ -1782,6 +1897,7 @@ body
 .review
 	+below(768px)
 		fw()
+		margin-bottom: 0
 	f()
 	justify-content space-between
 	align-items: stretch
@@ -1877,6 +1993,8 @@ body
 	+below(960px)
 		fw()
 		margin-bottom: 50px
+	+below(768px)
+		margin-bottom: 0
 	f()
 	justify-content space-between
 	align-items: flex-start
@@ -1930,6 +2048,7 @@ body
 	+below(640px)
 		fl()
 		justify-content center
+		width: 100%
 	f()
 	align-items center
 	width: 60%
@@ -1957,6 +2076,9 @@ body
 	margin-right: 20px
 
 .order__name
+	+below(640px)
+		width: 100%
+		margin-right: 0
 	width calc(100% - 100px)
 	margin-right: 10px
 .order__name-text
@@ -2000,16 +2122,22 @@ body
 		text-align center
 	font-weight 700
 	white-space nowrap
+.order__price-val
+	+below(640px)
+		font-size: 32px
 .order__price-val--sale
 	color $red
 	margin-bottom: 5px
 	font-size: 12px
 	font-weight: 400
 .order__delete
+	+below(1024px)
+		margin-left: 10px
 	+below(640px)
 		position absolute
 		top 0
 		right: 0
+
 	margin-left: 20px
 	.icon
 		cp()
@@ -3258,3 +3386,7 @@ select.select-beauty
 	margin-bottom: 10px
 .location-list__el--active
 	background: $mark
+
+.mobile--hidden
+	+below(640px)
+		display none
