@@ -106,8 +106,8 @@
                         <a class="nav-top__el" href="#">О нас</a>
                     </div>
                     <div class="auth icon-row">
-                        <!--toggle class .auth + .active to auth-img show-->
-                        <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                        <!--!!!NOTE remove .hidden-->
+                        <div class="auth-img hidden" style="background-image:url('img/user.jpg')"></div>
                         <svg class="icon icon--md icon--gray icon--right">
                             <use xlink:href="#user"></use>
                         </svg>
@@ -160,7 +160,7 @@
                         <div class="header-cart__cost">1249 ₸</div>
                         <div class="header-cart__size">5</div>
                         <div class="cart-bubble-wrap hidden">
-                            <!-- NOTE!!! REMOVE Class .hidden-->
+                            <!-- NOTE!!! remove class .hidden-->
                             <div class="cart-bubble">
                                 <svg class="icon">
                                     <use xlink:href="#free"></use>
@@ -210,8 +210,8 @@
                     </div>
                 </div>
                 <div class="auth icon-row">
-                    <!--toggle class .auth + .active to auth-img show-->
-                    <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                    <!-- NOTE!!! remove class .hidden-->
+                    <div class="auth-img hidden" style="background-image:url('img/user.jpg')"></div>
                     <svg class="icon icon--md icon--gray icon--right">
                         <use xlink:href="#user"></use>
                     </svg>
@@ -929,6 +929,18 @@
                     </div>
                 </div>
                 <!-- staff-descr === end-->
+            </div>
+        </div>
+        <div class="cookie">
+            <!-- to show add class .cookie + .cookie--active-->
+            <div class="main-cont">
+                <div class="cookie-wrap">
+                    <div class="cookie-text">Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете
+                        <a class="link--mark" href="#">условия обработки</a>&nbsp;персональных данных</div>
+                    <svg class="icon icon-close">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>

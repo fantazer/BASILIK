@@ -1660,7 +1660,7 @@ body {
   margin: 0;
   -webkit-animation: slideInDown 1s 1 ease-in-out;
           animation: slideInDown 1s 1 ease-in-out;
-  z-index: 10;
+  z-index: 100;
 }
 .shrink .header-top {
   display: none;
@@ -2145,15 +2145,15 @@ body {
 .noty-wrap {
   background: #1d1d1b;
   padding: 7px 0;
-  -webkit-transition: all 0.4s;
-          transition: all 0.4s;
 }
 @media only screen and (max-width: 1024px) {
   .noty-wrap {
     position: fixed;
     z-index: 10;
-    bottom: 0;
+    top: 50px;
     left: 0;
+    -webkit-transition: all 0.4s;
+            transition: all 0.4s;
   }
 }
 .noty-wrap--hidden {
@@ -2477,17 +2477,14 @@ body {
 .auth .icon {
   fill: #afcb08;
 }
-.auth.active .auth-img {
-  display: block;
-}
 .auth-img {
-  display: none;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  margin-right: 10px;
 }
 .lang {
   display: -webkit-box;
@@ -4188,7 +4185,6 @@ body {
 @media only screen and (max-width: 640px) {
   .create {
     width: 100%;
-    margin: 10px 0;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
@@ -4228,7 +4224,7 @@ body {
 }
 @media only screen and (max-width: 640px) {
   .footer {
-    padding: 30px 15px;
+    padding: 15px;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
@@ -4294,7 +4290,8 @@ body {
 }
 @media only screen and (max-width: 640px) {
   .footer-payment {
-    margin: 0 0 0 auto;
+    width: 100%;
+    margin: 20px 0;
   }
 }
 .bread {
@@ -4457,6 +4454,12 @@ body {
   background: #f5f5f5;
   display: inline-block;
   border: 1px solid #f5f5f5;
+}
+@media only screen and (max-width: 640px) {
+  .cat-link__el {
+    padding: 5px 12px;
+    margin: 0 10px 10px 0;
+  }
 }
 .cat-link__el:hover {
   background: #e8e8e8;
@@ -4897,6 +4900,21 @@ body {
 }
 .answer-head__icon {
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.answer-head__icon img {
+  width: 50px;
+  margin-right: 10px;
+}
+.answer-head__icon span {
+  font-weight: 700;
 }
 .answer-head__name {
   font-weight: 700;
@@ -6854,6 +6872,11 @@ select.select-beauty {
   -webkit-transition: all 0.4s;
           transition: all 0.4s;
 }
+@media only screen and (max-width: 640px) {
+  .history-info__el-review {
+    margin-top: 6px;
+  }
+}
 .history-info__el-review:hover {
   cursor: pointer;
 }
@@ -7391,15 +7414,17 @@ select.select-beauty {
 .location-list-wrap {
   position: relative;
 }
-.location-list-wrap:before {
-  z-index: 10;
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%);
-  width: 100%;
-  height: 90px;
+@media only screen and (min-width: 1024px) {
+  .location-list-wrap:before {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, #fff 100%);
+    width: 100%;
+    height: 90px;
+  }
 }
 .location-list {
   max-height: 300px;
@@ -7473,6 +7498,60 @@ select.select-beauty {
     padding-left: 0;
     margin-top: 0;
   }
+}
+.cookie {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+}
+.cookie--active {
+  z-index: 20;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.cookie-wrap {
+  padding: 15px 20px;
+  border-radius: 20px;
+  z-index: 10;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #e4e4e4;
+}
+.cookie-wrap .icon {
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  fill: #b4b4b4;
+}
+.cookie-wrap .icon:hover {
+  fill: #111;
+}
+.cookie-wrap .icon:hover {
+  cursor: pointer;
+}
+.cookie-text {
+  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
+  font-size: 12px;
 }
 @-webkit-keyframes slideInDown {
   from {

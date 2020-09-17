@@ -388,13 +388,13 @@ gulp.task('build:ftp',function(){
 				'copy:css',
 				'min:css',
 				'min:js',
-				'screenshot',
+				//'screenshot',
 				'img',
 				'svg',
 				'make',
 				//'zip',
 				//'guide',
-				//'ftp'
+				'ftp'
 				//'template'
 		)
 });

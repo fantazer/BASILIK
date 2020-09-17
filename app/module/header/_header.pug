@@ -33,8 +33,8 @@ mixin header()
 					each item in navTop
 						a(href="#").nav-top__el #{item}
 				.auth.icon-row
-					//toggle class .auth + .active to auth-img show
-					.auth-img(style="background-image:url('img/user.jpg')")
+					//!!!NOTE remove .hidden
+					.auth-img.hidden(style="background-image:url('img/user.jpg')")
 					+icon("user","icon icon--md icon--gray icon--right")
 					span Профиль
 				.lang
@@ -68,7 +68,7 @@ mixin header()
 					.header-cart__cost 1249 ₸
 					.header-cart__size 5
 					.cart-bubble-wrap.hidden
-						// NOTE!!! REMOVE Class .hidden
+						// NOTE!!! remove class .hidden
 						.cart-bubble
 							+icon("free","icon")
 							span Для бесплатной доставки осталось добавить товаров еще на 456 тенге
@@ -96,8 +96,8 @@ mixin header()
 					.header-contact__time заказывайте с 10 до 20
 
 			.auth.icon-row
-				//toggle class .auth + .active to auth-img show
-				.auth-img(style="background-image:url('img/user.jpg')")
+				// NOTE!!! remove class .hidden
+				.auth-img.hidden(style="background-image:url('img/user.jpg')")
 				+icon("user","icon icon--md icon--gray icon--right")
 				span Профиль
 			.slide-menu-nav

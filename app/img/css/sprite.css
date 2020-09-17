@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 51.2em 1642.2em;
+    background-size: 51.2001em 1691.3em;
 }
 
 .no-svg .icon:before {
@@ -586,8 +586,8 @@
 
   .icon.wi-fi:before {
       background-position: 0em -1640em;
-      width: 2.9105em;
-      height: 2.2em;
+      width: 51.2001em;
+      height: 51.2001em;
   }
 
 

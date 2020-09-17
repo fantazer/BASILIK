@@ -88,8 +88,8 @@
                         <a class="nav-top__el" href="#">О нас</a>
                     </div>
                     <div class="auth icon-row">
-                        <!--toggle class .auth + .active to auth-img show-->
-                        <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                        <!--!!!NOTE remove .hidden-->
+                        <div class="auth-img hidden" style="background-image:url('img/user.jpg')"></div>
                         <svg class="icon icon--md icon--gray icon--right">
                             <use xlink:href="#user"></use>
                         </svg>
@@ -142,7 +142,7 @@
                         <div class="header-cart__cost">1249 ₸</div>
                         <div class="header-cart__size">5</div>
                         <div class="cart-bubble-wrap hidden">
-                            <!-- NOTE!!! REMOVE Class .hidden-->
+                            <!-- NOTE!!! remove class .hidden-->
                             <div class="cart-bubble">
                                 <svg class="icon">
                                     <use xlink:href="#free"></use>
@@ -192,8 +192,8 @@
                     </div>
                 </div>
                 <div class="auth icon-row">
-                    <!--toggle class .auth + .active to auth-img show-->
-                    <div class="auth-img" style="background-image:url('img/user.jpg')"></div>
+                    <!-- NOTE!!! remove class .hidden-->
+                    <div class="auth-img hidden" style="background-image:url('img/user.jpg')"></div>
                     <svg class="icon icon--md icon--gray icon--right">
                         <use xlink:href="#user"></use>
                     </svg>
@@ -238,64 +238,62 @@
         <!--block header end-->
         <div class="content">
             <div class="main-cont">
-                <div class="main-cont">
-                    <div class="info-banner" style="background-image:url('img/sale-full.jpg')"></div>
-                    <div class="title-row">
-                        <div class="arrow" onclick="window.history.go(-1); return false;">
-                            <svg class="icon">
-                                <use xlink:href="#arrow-conner-left"></use>
-                            </svg>
-                        </div>
-                        <div class="title title--lg">Скидка в день рождения!</div>
+                <div class="info-banner" style="background-image:url('img/sale-full.jpg')"></div>
+                <div class="title-row">
+                    <div class="arrow" onclick="window.history.go(-1); return false;">
+                        <svg class="icon">
+                            <use xlink:href="#arrow-conner-left"></use>
+                        </svg>
                     </div>
-                    <div class="info-descr text">
-                        <div class="sale-date">
-                            <svg class="icon">
+                    <div class="title title--lg">Скидка в день рождения!</div>
+                </div>
+                <div class="info-descr text">
+                    <div class="sale-date">
+                        <svg class="icon">
+                            <use xlink:href="#clock"></use>
+                        </svg>
+                        <span>Действует до 21 августа 2020 г</span>
+                    </div>
+                    <p>Возможность получить скидку действует в течение 7-ми дней (в День рождения и 6 дней после Дня рождения)*</p>
+                    <p>Скидка распространяется на все меню представленное на этом сайте **</p>
+                    <p>* При себе необходимо иметь документ, в котором указана дата вашего Дня рождения.</p>
+                    <p>** Скидка НЕ суммируется с другими скидками («Счастливые часы», «Красная цена») и НЕ действует на блюда из разделов: Бизнес-Ланчи, Завтраки, Детское меню, Саке Шок, Коктейль Шок.</p>
+                </div>
+                <div class="title title--lg type--center">Другие акции</div>
+                <div class="sale-list--lg">
+                    <a class="sale-el" href="#">
+                        <div class="sale-el__img" style="background-image:url('img/sale-1.jpg')"></div>
+                        <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
+                        <div class="sale-el__text">Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..</div>
+                        <div class="sale-el__date">
+                            <svg class="icon icon--sm icon--right icon--gray">
                                 <use xlink:href="#clock"></use>
                             </svg>
-                            <span>Действует до 21 августа 2020 г</span>
+                            <span>Акция действует до 21 августа 2020 г</span>
                         </div>
-                        <p>Возможность получить скидку действует в течение 7-ми дней (в День рождения и 6 дней после Дня рождения)*</p>
-                        <p>Скидка распространяется на все меню представленное на этом сайте **</p>
-                        <p>* При себе необходимо иметь документ, в котором указана дата вашего Дня рождения.</p>
-                        <p>** Скидка НЕ суммируется с другими скидками («Счастливые часы», «Красная цена») и НЕ действует на блюда из разделов: Бизнес-Ланчи, Завтраки, Детское меню, Саке Шок, Коктейль Шок.</p>
-                    </div>
-                    <div class="title title--lg type--center">Другие акции</div>
-                    <div class="sale-list--lg">
-                        <a class="sale-el" href="#">
-                            <div class="sale-el__img" style="background-image:url('img/sale-1.jpg')"></div>
-                            <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
-                            <div class="sale-el__text">Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..</div>
-                            <div class="sale-el__date">
-                                <svg class="icon icon--sm icon--right icon--gray">
-                                    <use xlink:href="#clock"></use>
-                                </svg>
-                                <span>Акция действует до 21 августа 2020 г</span>
-                            </div>
-                        </a>
-                        <a class="sale-el" href="#">
-                            <div class="sale-el__img" style="background-image:url('img/sale-2.jpg')"></div>
-                            <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
-                            <div class="sale-el__text">Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..</div>
-                            <div class="sale-el__date">
-                                <svg class="icon icon--sm icon--right icon--gray">
-                                    <use xlink:href="#clock"></use>
-                                </svg>
-                                <span>Акция действует до 21 августа 2020 г</span>
-                            </div>
-                        </a>
-                        <a class="sale-el" href="#">
-                            <div class="sale-el__img" style="background-image:url('img/sale-3.jpg')"></div>
-                            <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
-                            <div class="sale-el__text">Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..</div>
-                            <div class="sale-el__date">
-                                <svg class="icon icon--sm icon--right icon--gray">
-                                    <use xlink:href="#clock"></use>
-                                </svg>
-                                <span>Акция действует до 21 августа 2020 г</span>
-                            </div>
-                        </a>
-                    </div>
+                    </a>
+                    <a class="sale-el" href="#">
+                        <div class="sale-el__img" style="background-image:url('img/sale-2.jpg')"></div>
+                        <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
+                        <div class="sale-el__text">Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..</div>
+                        <div class="sale-el__date">
+                            <svg class="icon icon--sm icon--right icon--gray">
+                                <use xlink:href="#clock"></use>
+                            </svg>
+                            <span>Акция действует до 21 августа 2020 г</span>
+                        </div>
+                    </a>
+                    <a class="sale-el" href="#">
+                        <div class="sale-el__img" style="background-image:url('img/sale-3.jpg')"></div>
+                        <div class="sale-el__title">Съешь плов и выиграй 50 000 тенге!</div>
+                        <div class="sale-el__text">Друзья, у нас новый конкурс для вас! Это даже не конкурс, а целое состязание. С 21 по 25 марта каждый, кт..</div>
+                        <div class="sale-el__date">
+                            <svg class="icon icon--sm icon--right icon--gray">
+                                <use xlink:href="#clock"></use>
+                            </svg>
+                            <span>Акция действует до 21 августа 2020 г</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
